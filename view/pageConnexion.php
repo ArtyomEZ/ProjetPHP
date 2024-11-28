@@ -15,7 +15,7 @@
                         <div class="column">
                             <label>Identifiant:</label>
                         </div>
-                        <div class="column">
+                        <div class="column-begin">
                             <input type="text">
                         </div>
                     </div>
@@ -23,8 +23,8 @@
                         <div class="column">
                             <label>Mot de Passe:</label>
                         </div>
-                        <div class="column">
-                            <input type="text">
+                        <div class="column-begin">
+                            <input type="password">
                         </div>
                     </div>
                     <div class="row">

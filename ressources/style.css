@@ -10,6 +10,7 @@
 }
 
 .column {
+    text-align: center;
     height: inherit;
     flex: 50%;
     align-content: center;
@@ -19,12 +20,15 @@
     height: inherit;
     flex: 50%;
     align-content: center;
+    align-items: flex-start;
 }
 
 .column-begin {
+    float:right;
     height: inherit;
     flex: 50%;
     align-content: center;
+    align-items: start;
 }
 
 body
@@ -88,12 +92,14 @@ a
 
 input
 {
+    float:left;
     margin: 8px 0;
     border-radius: 4px;
 }
 
 input:focus
 {
+    float:left;
     border-color: Lightgrey;
     border-radius: 5px;
 }
@@ -101,14 +107,25 @@ input:focus
 
 input[type=text]
 {
+    float:left;
     padding: 8px 4px;
     border-radius: 8px;
 }
 
-input[type=text]:focus
+input[type=password]
 {
+    float:left;
     padding: 8px 4px;
     border-radius: 8px;
+}
+
+input[type=submit]
+{
+    float:left;
+    padding: 8px 20px;
+    border-radius: 8px;
+    background-color: #D9D9D9;
+    font: 1.2rem "Fira Sans", sans-serif;
 }
 
 img.img-30pc
