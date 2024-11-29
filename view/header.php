@@ -16,6 +16,9 @@
 			<div class="column">
 			</div>
 			<div class="column">
+                <form action="pageConnexion.php">
+                    <input type="submit" value="Se Déconnecter" >
+                </form>
 			</div>
 			<div class="column-end">
 				<img src="../ressources/FSI_logo.png" alt="Logo FSI">

@@ -10,7 +10,7 @@
     <div class="row">
         <div class="column">
             <div class="form-style">
-                <form>
+                <form action="pageAccueilTuteur.php">
                     <div class="row">
                         <div class="column">
                             <label>Identifiant:</label>
@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <input type="submit" value="Confirmer">
+                        <input type="submit" value="Confirmer" >
                     </div>
                 </form>
             </div>
