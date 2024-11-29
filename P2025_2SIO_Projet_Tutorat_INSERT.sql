@@ -25,9 +25,9 @@
     ('Leclerc', 'Paul', '0634567890', 'paul.leclerc@mecatronix.com', 3);
 
     INSERT INTO Utilisateur (nomUti, preUti, mailUti, telUti, adrUti, cpUti, vilUti, logUti, mdpUti, altUti, nbrMaxEtu3, nbrMaxEtu4, nbrMaxEtu5, idTypUser, idSpe, idCla, idEnt, idMai, idTut) VALUES
-    ('Dubois', 'Alice', 'alice.dubois@etu.univ.fr', '0701234567', '10 Rue des Écoles', '75006', 'Paris', 'alice.dubois', 'password123', 1, NULL, NULL, NULL, 1, 1, 1, 1, 1, NULL),
-    ('Morel', 'Benoît', 'benoit.morel@etu.univ.fr', '0712345678', '14 Rue des Étudiants', '69007', 'Lyon', 'benoit.morel', 'secure456', 0, NULL, NULL, NULL, 2, NULL, 1, 1,NULL,NULL),
-    ('Lemoine', 'Chloé', 'chloe.lemoine@etu.univ.fr', '0723456789', '18 Avenue des Sciences', '34000', 'Montpellier', 'chloe.lemoine', 'mysecret789', 0, NULL, NULL, NULL, 3, NULL, NULL, NULL,NULL,NULL);
+    ('Dubois', 'Alice', 'alice.dubois@etu.univ.fr', '0701234567', '10 Rue des Écoles', '75006', 'Paris', 'alice.dubois', 'password123', 1, 30, 25, 20, 1, 1, 1, 1, 1, NULL),
+    ('Morel', 'Benoît', 'benoit.morel@etu.univ.fr', '0712345678', '14 Rue des Étudiants', '69007', 'Lyon', 'benoit.morel', 'secure456', 0, 30, 25, 20, 2, NULL, 1, 1,NULL,NULL),
+    ('Lemoine', 'Chloé', 'chloe.lemoine@etu.univ.fr', '0723456789', '18 Avenue des Sciences', '34000', 'Montpellier', 'chloe.lemoine', 'mysecret789', 0,  30, 25, 20, 3, NULL, NULL, NULL,NULL,NULL);
 
     INSERT INTO Bilan1 (notEnt1, notDos1, notOral1, rema1, datBil1, idUti) VALUES
     (16.5, 15.0, 16.0, 'Incroyable.', '2024-05-15', 1),
