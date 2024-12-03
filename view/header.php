@@ -8,12 +8,12 @@
 			</div>
 			<div class="column">
                 <a href="">
-                    <p>Paramètres</p>
+                    <p>Accueil</p>
                 </a>
 			</div>
 			<div class="column">
                 <a href="">
-                    <p>Mes infos</p>
+                    <p>Mes informations</p>
                 </a>
 			</div>
 			<div class="column">
