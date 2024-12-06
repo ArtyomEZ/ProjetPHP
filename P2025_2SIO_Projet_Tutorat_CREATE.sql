@@ -4,7 +4,7 @@ CREATE TABLE Specialite (
     CONSTRAINT Specialite_PK PRIMARY KEY (idSpe)
 )ENGINE=InnoDB;
 
-CREATE TABLE Type_Utilisateur (
+CREATE TABLE TypeUtilisateur (
     idTypUser INT NOT NULL AUTO_INCREMENT,
     typUser VARCHAR(35),
     CONSTRAINT Type_Utilisateur_PK PRIMARY KEY (idTypUser)
@@ -26,7 +26,7 @@ CREATE TABLE Classe (
     CONSTRAINT Classe_PK PRIMARY KEY (idCla)
 )ENGINE=InnoDB;
 
-CREATE TABLE Maitre_Apprentissage (
+CREATE TABLE MaitreApprentissage (
     idMai INT NOT NULL AUTO_INCREMENT,
     nomMai VARCHAR(100),
     preMai VARCHAR(100),
@@ -59,11 +59,11 @@ CREATE TABLE Utilisateur (
     idMai INT,
     idTut INT NULL,
     CONSTRAINT Utilisateur_PK PRIMARY KEY (idUti),
-    CONSTRAINT Utilisateur_TypeUtilisateur_FK FOREIGN KEY (idTypUser) REFERENCES Type_Utilisateur(idTypUser),
+    CONSTRAINT Utilisateur_TypeUtilisateur_FK FOREIGN KEY (idTypUser) REFERENCES TypeUtilisateur(idTypUser),
     CONSTRAINT Utilisateur_Specialite_FK FOREIGN KEY (idSpe) REFERENCES Specialite(idSpe),
     CONSTRAINT Utilisateur_Classe_FK FOREIGN KEY (idCla) REFERENCES Classe(idCla),
     CONSTRAINT Utilisateur_Entreprise_FK FOREIGN KEY (idEnt) REFERENCES Entreprise(idEnt),
-    CONSTRAINT Utilisateur_MaitreApprentissage_FK FOREIGN KEY (idMai) REFERENCES Maitre_Apprentissage(idMai),
+    CONSTRAINT Utilisateur_MaitreApprentissage_FK FOREIGN KEY (idMai) REFERENCES MaitreApprentissage(idMai),
     CONSTRAINT Utilisateur_Utilisateur_FK FOREIGN KEY (idTut) REFERENCES Utilisateur(IdUti)
 )ENGINE=InnoDB;
 
