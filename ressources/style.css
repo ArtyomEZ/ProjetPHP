@@ -181,7 +181,8 @@ input[type=submit].sub-center
     margin: 8px 8px 0px 0px;
     padding: 8px 20px;
     border-radius: 8px;
-    background-color: white;
+    background-color: #9ED6A7;
+    border: #9ED6A7;
     font: 1.2rem "Fira Sans", sans-serif;
 }
 
