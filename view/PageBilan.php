@@ -9,7 +9,7 @@
 <body>
     <?php
         include("header.php");
-        include("tableauBilan");
+        include("tableauBilan.php");
     ?>
 </body>
 </html>
