@@ -7,10 +7,10 @@
             <div class="column">
                 <div class="whitebox">
                     <h2>
-                        Placeholder
+                        Bilan 1
                     </h2>
                     <form action="">
-                        <input type="submit">
+                        <input type="submit" class="sub-center" value="Voir">
                     </form>
                 </div>
             </div>
@@ -19,10 +19,10 @@
             <div class="column">
                 <div class="whitebox">
                     <h2>
-                        Placeholder
+                        Bilan 2
                     </h2>
                     <form action="">
-                        <input type="submit">
+                        <input type="submit" class="sub-center" value="Voir">
                     </form>
                 </div>
             </div>
