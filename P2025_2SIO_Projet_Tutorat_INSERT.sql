@@ -31,11 +31,11 @@
     ('Dupont', 'Arnaud', 'arnaud.dupont@lyon.ort.fr', '0712346678', '9 rue des tuteurs', '69002', 'Lyon', 'arnaud.dupont', 'arnaud123',NULL,20,20,20,2, NULL, NULL, NULL, NULL, NULL),
     ('Rahaimi', 'Oualid', 'oualid.rahaimi@lyon.ort.fr', '0712345478', '10 rue des tuteurs', '69002', 'Lyon', 'oualid.rahaimi', 'oualid123', NULL, 20, 20, 20, 2, NULL, NULL, NULL, NULL, NULL),
     ('Gharbi', 'Aymen', 'aymen.gharbi@lyon.ort.fr', '0701234567', '10 Rue des Écoles', '69008', 'Lyon', 'aymen.gharbi', 'aymen123', 1, NULL, NULL, NULL, 1, 1, 1, 1, 1, NULL),
-    ('Zenasni', 'Hakim', 'hakim.zenasni@lyon.ort.fr', '0712345678', '14 Rue des Étudiants', '69007', 'Lyon', 'hakim.zenasni', 'hakim123', 0, NULL, NULL, NULL, 1, 1, 1, 1, 2, 1),
-    ('Dupont', 'Dupond', 'dupont.dupont@lyon.ort.fr', '07012364517', '10 Rue des dupont', '69008', 'Lyon', 'dupont.dupond', 'dupont123', 1, NULL, NULL, NULL, 1, 2, 2, 2, 2, 2),
-    ('Dupont', 'Xavier', 'xavier.dupont@lyon.ort.fr', '0712345677', '18 Rue des recherche', '69007', 'Lyon', 'xavier.dupont', 'xavier123', 0, NULL, NULL, NULL, 1, 1, 1, NULL, 3, 3),
-    ('Lemoine', 'Chloé', 'chloe.lemoine@lyon.ort.fr', '0719876543', '12 Rue des Lumières', '69001', 'Lyon', 'chloe.lemoine', 'chloe123', 1, NULL, NULL, NULL, 1, 3, 2, 1, 2, 1),
-    ('Morel', 'Benoît', 'benoit.morel@lyon.ort.fr', '0714567890', '7 Rue des Sciences', '69002', 'Lyon', 'benoit.morel', 'benoit123', 1, NULL, NULL, NULL, 1, 1, 3, 2, 3, 1);
+    ('Zenasni', 'Hakim', 'hakim.zenasni@lyon.ort.fr', '0712345678', '14 Rue des Étudiants', '69007', 'Lyon', 'hakim.zenasni', 'hakim123', 0, NULL, NULL, NULL, 1, 1, 1, 1, 2, 2),
+    ('Dupont', 'Dupond', 'dupont.dupont@lyon.ort.fr', '07012364517', '10 Rue des dupont', '69008', 'Lyon', 'dupont.dupond', 'dupont123', 1, NULL, NULL, NULL, 1, 2, 2, 2, 2, 3),
+    ('Dupont', 'Xavier', 'xavier.dupont@lyon.ort.fr', '0712345677', '18 Rue des recherche', '69007', 'Lyon', 'xavier.dupont', 'xavier123', 0, NULL, NULL, NULL, 1, 1, 1, NULL, 3, 4),
+    ('Lemoine', 'Chloé', 'chloe.lemoine@lyon.ort.fr', '0719876543', '12 Rue des Lumières', '69001', 'Lyon', 'chloe.lemoine', 'chloe123', 1, NULL, NULL, NULL, 1, 3, 2, 1, 2, 2),
+    ('Morel', 'Benoît', 'benoit.morel@lyon.ort.fr', '0714567890', '7 Rue des Sciences', '69002', 'Lyon', 'benoit.morel', 'benoit123', 1, NULL, NULL, NULL, 1, 1, 3, 2, 3, 4);
 
     INSERT INTO Bilan1 (notEnt1, notDos1, notOral1, rema1, datBil1, idUti) VALUES
     (16.5, 15.0, 16.0, 'Incroyable.', '2025-01-01', 5),
