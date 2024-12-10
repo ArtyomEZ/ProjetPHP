@@ -19,7 +19,7 @@
 			<div class="column">
 			</div>
 			<div class="column-end">
-                <form action="../view/pageConnexion.php">
+                <form action="pageConnexion.php">
                     <input type="submit" value="Se Déconnecter" >
                 </form>
 			</div>

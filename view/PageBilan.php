@@ -8,8 +8,8 @@
     </head>
     <body>
         <?php
-            include("../Controllers/header.php");
-            include("../Controllers/tableauBilan.php");
+            include("../view/header.php");
+            include("../view/tableauBilan.php");
         ?>
     </body>
 </html>

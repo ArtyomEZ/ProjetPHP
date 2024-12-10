@@ -8,10 +8,10 @@
     </head>
     <body>
         <?php
-            include("../Controllers/header.php");
-            include("../Controllers/alertes.php");
-            include("../Controllers/listeEleves.php");
-            include("../Controllers/parametresAdmin.php");
+            include("../view/header.php");
+            include("../view/alertes.php");
+            include("../view/listeEleves.php");
+            include("../view/parametresAdmin.php");
         ?>
     </body>
 </html>
