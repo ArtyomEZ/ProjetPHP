@@ -8,9 +8,9 @@
     </head>
     <body>
         <?php
-            include("header.php");
-            include("alertes.php");
-            include("listeEleves.php");
+            include("../Controllers/header.php");
+            include("../Controllers/alertes.php");
+            include("../Controllers/listeEleves.php");
         ?>
     </body>
 </html>
