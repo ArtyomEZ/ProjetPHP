@@ -5,23 +5,22 @@ namespace BO;
 class Etudiant extends Utilisateur {
 
     private bool $altUti;
-    private ?Tuteur $monTuteur;
-    private ?Classe $maClasse;
-    private ?MaitreApprentissage $monMaiApp;
-    private ?Specialite $maSpecialite;
-    private ?Bilan1 $monBilan1;
-    private ?Bilan2 $monBilan2;
-    private ?Entreprise $monEntreprise;
-    public function __construct(bool $altUti, ?Entreprise $monEntreprise, ?Tuteur $monTuteur, ?Classe $maClasse, ?MaitreApprentissage $monMaiApp, ?Specialite $maSpecialite, ?Bilan1 $mesBilan1, ?Bilan2 $mesBilan2,int $idUti, string $nomUti, string $preUti, string $mailUti, string $telUti, string $adrUti, string $cpUti, string $vilUti, string $logUti, string $mdpUti)
+    private Tuteur $monTuteur;
+    private Classe $maClasse;
+    private MaitreApprentissage $monMaiApp;
+    private Specialite $maSpecialite;
+    private array $mesBilan1;
+    private array $mesBilan2;
+
+    public function __construct(bool $altUti, Tuteur $monTuteur, Classe $maClasse, MaitreApprentissage $monMaiApp, Specialite $maSpecialite, array $mesBilan1, array $mesBilan2,int $idUti, string $nomUti, string $preUti, string $mailUti, string $telUti, string $adrUti, string $cpUti, string $vilUti, string $logUti, string $mdpUti)
     {
         $this->altUti = $altUti;
-        $this->monEntreprise = $monEntreprise;
         $this->monTuteur = $monTuteur;
         $this->maClasse = $maClasse;
         $this->monMaiApp = $monMaiApp;
         $this->maSpecialite = $maSpecialite;
-        $this->monBilan1 = $mesBilan1;
-        $this->monBilan2 = $mesBilan2;
+        $this->mesBilan1 = $mesBilan1;
+        $this->mesBilan2 = $mesBilan2;
         parent::__construct($idUti, $nomUti,  $preUti,  $mailUti,  $telUti,  $adrUti,  $cpUti,  $vilUti,  $logUti,  $mdpUti);
     }
 
@@ -75,24 +74,24 @@ class Etudiant extends Utilisateur {
         $this->maSpecialite = $maSpecialite;
     }
 
-    public function getMonBilan1(): ?Bilan1
+    public function getMesBilan1(): array
     {
-        return $this->monBilan1;
+        return $this->mesBilan1;
     }
 
-    public function setMonBilan1(?Bilan1 $mesBilan1): void
+    public function setMesBilan1(array $mesBilan1): void
     {
-        $this->monBilan1 = $mesBilan1;
+        $this->mesBilan1 = $mesBilan1;
     }
 
-    public function getMonBilan2(): ?Bilan2
+    public function getMesBilan2(): array
     {
-        return $this->monBilan2;
+        return $this->mesBilan2;
     }
 
-    public function setMonBilan2(?Bilan2 $mesBilan2): void
+    public function setMesBilan2(array $mesBilan2): void
     {
-        $this->monBilan2 = $mesBilan2;
+        $this->mesBilan2 = $mesBilan2;
     }
 
     public function isAltEtu(): bool {
@@ -118,17 +117,6 @@ class Etudiant extends Utilisateur {
     public function getIdEtu(): int {
         return $this->idUti;
     }
-
-    public function getMonEntreprise(): ?Entreprise
-    {
-        return $this->monEntreprise;
-    }
-
-    public function setMonEntreprise(?Entreprise $monEntreprise): void
-    {
-        $this->monEntreprise = $monEntreprise;
-    }
-
 
 
 

@@ -8,18 +8,18 @@
 			</div>
 			<div class="column">
                 <a href="">
-                    <p>Accueil</p>
+                    <p>Paramètres</p>
                 </a>
 			</div>
 			<div class="column">
-                <a href="">
-                    <p>Mes informations</p>
+                <a href="Mesinfos.php">
+                    <p>Mes infos</p>
                 </a>
 			</div>
 			<div class="column">
 			</div>
 			<div class="column-end">
-                <form action="../vue/pageConnexion.php">
+                <form action="pageConnexion.php">
                     <input type="submit" value="Se Déconnecter" >
                 </form>
 			</div>

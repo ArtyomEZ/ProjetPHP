@@ -1,7 +1,7 @@
 @media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
+    .column {
+        width: 100%;
+    }
 }
 
 .row {
@@ -135,6 +135,13 @@ a
     color: #5031FF;
 }
 
+hr{
+    border-color: #9ED6A7;
+    background-color: #9ED6A7 ;
+    background-size: 8px;
+    height: 8px;
+}
+
 input
 {
     float:left;
@@ -153,7 +160,7 @@ input:focus
 
 input[type=text]
 {
-    float:left;
+
     padding: 8px 4px;
     border-radius: 8px;
 }
@@ -168,21 +175,10 @@ input[type=password]
 input[type=submit]
 {
     float:left;
-    margin: 8px 8px 0px 15vw;
+    margin: 8px 8px 0px 45vw;
     padding: 8px 20px;
     border-radius: 8px;
     background-color: white;
-    font: 1.2rem "Fira Sans", sans-serif;
-}
-
-input[type=submit].sub-center
-{
-    float: inherit;
-    margin: 8px 8px 0px 0px;
-    padding: 8px 20px;
-    border-radius: 8px;
-    background-color: #9ED6A7;
-    border: #9ED6A7;
     font: 1.2rem "Fira Sans", sans-serif;
 }
 

@@ -6,16 +6,36 @@ use Couchbase\User;
 
 class Tuteur extends Utilisateur {
 
+    private int $nbrMaxEtu1;
+    private int $nbrMaxEtu2;
     private int $nbrMaxEtu3;
-    private int $nbrMaxEtu4;
-    private int $nbrMaxEtu5;
 
-    public function __construct(int $nbrMaxEtu3, int $nbrMaxEtu4, int $nbrMaxEtu5,int $idUti, string $nomUti, string $preUti, string $mailUti, string $telUti, string $adrUti, string $cpUti,string $vilUti,string $logUti, string $mdpUti )
+    public function __construct(int $nbrMaxEtu1, int $nbrMaxEtu2, int $nbrMaxEtu3,int $idUti, string $nomUti, string $preUti, string $mailUti, string $telUti, string $adrUti, string $cpUti,string $vilUti,string $logUti, string $mdpUti )
     {
+        $this->nbrMaxEtu1 = $nbrMaxEtu1;
+        $this->nbrMaxEtu2 = $nbrMaxEtu2;
         $this->nbrMaxEtu3 = $nbrMaxEtu3;
-        $this->nbrMaxEtu4 = $nbrMaxEtu4;
-        $this->nbrMaxEtu5 = $nbrMaxEtu5;
         parent::__construct($idUti, $nomUti,  $preUti,  $mailUti,  $telUti,  $adrUti,  $cpUti,  $vilUti,  $logUti,  $mdpUti);
+    }
+
+    public function getNbrMaxEtu1(): int
+    {
+        return $this->nbrMaxEtu1;
+    }
+
+    public function setNbrMaxEtu1(int $nbrMaxEtu1): void
+    {
+        $this->nbrMaxEtu1 = $nbrMaxEtu1;
+    }
+
+    public function getNbrMaxEtu2(): int
+    {
+        return $this->nbrMaxEtu2;
+    }
+
+    public function setNbrMaxEtu2(int $nbrMaxEtu2): void
+    {
+        $this->nbrMaxEtu2 = $nbrMaxEtu2;
     }
 
     public function getNbrMaxEtu3(): int
@@ -27,29 +47,6 @@ class Tuteur extends Utilisateur {
     {
         $this->nbrMaxEtu3 = $nbrMaxEtu3;
     }
-
-    public function getNbrMaxEtu4(): int
-    {
-        return $this->nbrMaxEtu4;
-    }
-
-    public function setNbrMaxEtu4(int $nbrMaxEtu4): void
-    {
-        $this->nbrMaxEtu4 = $nbrMaxEtu4;
-    }
-
-    public function getNbrMaxEtu5(): int
-    {
-        return $this->nbrMaxEtu5;
-    }
-
-    public function setNbrMaxEtu5(int $nbrMaxEtu5): void
-    {
-        $this->nbrMaxEtu5 = $nbrMaxEtu5;
-    }
-
-
-
 
 
 
