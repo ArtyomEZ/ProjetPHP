@@ -8,7 +8,7 @@
     </head>
     <body>
         <?php
-            include("../view/header.php");
+            include("../view/headerTuteur.php");
             include("../view/tableauBilan.php");
         ?>
     </body>

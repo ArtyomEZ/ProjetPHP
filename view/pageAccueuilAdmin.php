@@ -8,9 +8,9 @@
     </head>
     <body>
         <?php
-            include("../view/header.php");
+            include("../view/headerTuteur.php");
             include("../view/alertes.php");
-            include("../view/listeEleves.php");
+            include("../view/listeElevesAdmin.php");
             include("../view/parametresAdmin.php");
         ?>
     </body>
