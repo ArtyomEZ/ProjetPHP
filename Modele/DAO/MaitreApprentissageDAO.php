@@ -16,7 +16,7 @@ class MaitreApprentissageDAO
     {
         try {
 
-            $burger = "INSERT INTO Maitre_Apprentissage (idMai , nomMai,preMai,telMai,mailMai,idEnt   ) VALUES (:idMai , :nomMai,:preMai,:telMai,:mailMai,:idEnt)";
+            $burger = "INSERT INTO MaitreApprentissage (idMai , nomMai,preMai,telMai,mailMai,idEnt   ) VALUES (:idMai , :nomMai,:preMai,:telMai,:mailMai,:idEnt)";
             $stmt = $this->pdo->prepare($burger);
             $stmt->bindValue(':idMai', $maitreApp->getIdMai(), \PDO::PARAM_INT);
             $stmt->bindValue(':nomMai', $maitreApp->getNomMai(), \PDO::PARAM_STR);
@@ -33,7 +33,7 @@ class MaitreApprentissageDAO
 
     public function GetById(int $idMai): ?MaitreApprentissage {
         try {
-            $burger = "SELECT * FROM Maitre_Apprentissage WHERE idMai = :idMai";
+            $burger = "SELECT * FROM MaitreApprentissage WHERE idMai = :idMai";
             $stmt = $this->pdo->prepare($burger);
             $stmt->bindValue(':idMai', $idMai, \PDO::PARAM_INT);
             $stmt->execute();
@@ -77,7 +77,7 @@ class MaitreApprentissageDAO
 
         public function Update(MaitreApprentissage $MaitreApprentissage): bool {
         try {
-            $burger = "UPDATE Maitre_Apprentissage SET 
+            $burger = "UPDATE MaitreApprentissage SET 
                         idMai = :idMai,
                         nomMai = :nomMai, 
                         preMai = :preMai, 
@@ -102,7 +102,7 @@ class MaitreApprentissageDAO
     public function Delete(int $idMai): bool
     {
         try {
-            $burger = "DELETE FROM Maitre_Apprentissage WHERE idMai = :idMai";
+            $burger = "DELETE FROM MaitreApprentissage WHERE idMai = :idMai";
             $stmt = $this->pdo->prepare($burger);
             $stmt->bindValue(':idMai', $idMai, \PDO::PARAM_INT);
             return $stmt->execute();

@@ -93,13 +93,23 @@ class EntrepriseDAO {
     public function Delete(int $idEnt): bool
     {
         try {
-            $burger = "DELETE FROM Entreprise WHERE idEnt = :idEnt";
+            $verif = "SELECT COUNT(*) FROM maitreapprentissage WHERE idEnt = :idEnt";
+            $checkStmt = $this->pdo->prepare($verif);
+            $checkStmt->bindValue(':idEnt', $idEnt, \PDO::PARAM_INT);
+            $checkStmt->execute();
+            $nbrMaiApp = $checkStmt->fetchColumn();
+            if ($nbrMaiApp > 0) {
+                echo "Impossible de supprimer cette entreprise car elle est liée à un maître d'apprentissage.";
+                return false;
+            }
+            $burger = "DELETE FROM entreprise WHERE idEnt = :idEnt";
             $stmt = $this->pdo->prepare($burger);
             $stmt->bindValue(':idEnt', $idEnt, \PDO::PARAM_INT);
             return $stmt->execute();
-        } catch (Exception $e) {
+        } catch (PDOException $e) {
             echo "Erreur lors de la suppression de l'entreprise: " . $e->getMessage();
             return false;
         }
     }
+
 }

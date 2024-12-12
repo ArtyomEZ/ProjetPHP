@@ -10,13 +10,16 @@
     <div class="row">
         <div class="column">
             <div class="form-style">
-                <form action="pageAccueilTuteur.php">
+                <form action="../controleur/ControleurConnexion.php" method="POST">
+
                     <div class="row">
                         <div class="column">
                             <label>Identifiant:</label>
                         </div>
                         <div class="column-begin">
-                            <input type="text">
+                            <label>
+                                <input type="text" name="login">
+                            </label>
                         </div>
                     </div>
                     <div class="row">
@@ -24,11 +27,16 @@
                             <label>Mot de Passe:</label>
                         </div>
                         <div class="column-begin">
-                            <input type="password">
+                            <label>
+                                <input type="password" name="password">
+                            </label>
                         </div>
                     </div>
+                    <?php if (isset($_GET['error'])): ?>
+                        <p style="color: red;"><?= htmlspecialchars($_GET['error']); ?></p>
+                    <?php endif; ?>
                     <div class="row">
-                        <input type="submit" value="Confirmer" >
+                        <input type="submit" value="Confirmer">
                     </div>
                 </form>
             </div>

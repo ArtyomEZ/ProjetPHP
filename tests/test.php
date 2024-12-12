@@ -39,17 +39,17 @@ require_once '../Modele\BO\Etudiant.php';
 
 ////Test crud specialité :
 $bdd = initialiseConnexionBDD();
-$specialiteDAO = new SpecialiteDAO($bdd);
-
-//  test du Create
-$specialite = new Specialite(15, "La SVTttt");
-
-if ($specialiteDAO->Create($specialite)) {
-    echo "La spécialité a été ajoutée avec succès.";
-} else {
-    echo "Une erreur s'est produite lors de l'ajout de la spécialité.";
-}
-//////  test du getbyid
+//$specialiteDAO = new SpecialiteDAO($bdd);
+//
+////  test du Create
+//$specialite = new Specialite(15, "La SVTttt");
+//
+//if ($specialiteDAO->Create($specialite)) {
+//    echo "La spécialité a été ajoutée avec succès.";
+//} else {
+//    echo "Une erreur s'est produite lors de l'ajout de la spécialité.";
+//}
+////////  test du getbyid
 //////$specialite = $specialiteDAO->GetById(2);
 //////var_dump($specialite);
 //////if($specialite == null){
@@ -193,26 +193,25 @@ if ($specialiteDAO->Create($specialite)) {
 //$tuteur = new Tuteur(3,2,1,2,"yoboy","zaza","zaza","zaza","zaza","zaza","zaza","zaza","zaaz");
 //$classe = new Classe(1, 'Classe 1', 30);
 //$specialite = new Specialite(1, 'Informatique');
+////
+//**
+////////
+$etudiantDAO = new DAO\EtudiantDAO($bdd);
 //
-//////
-//$etudiant = new Etudiant(1, 'NomEtudiant', 'PrenomEtudiant', 'email@etudiant.com', '0102030406', 'Adresse Etudiant', '75000', 'Paris', 'logEtudiant', 'mdpEtudiant', true, $tuteur, $classe, $specialite,"zaza","zaza","zaza");
 ////
-//////
-////$etudiantDAO = new DAO\EtudiantDAO($bdd);
-////
-//////
-////if ($etudiantDAO->create($etudiant)) {
-////    echo "Étudiant créé avec succès.";
-////} else {
-////    echo "Erreur lors de la création de l'étudiant.";
-////}
-$tuteurDAO = new DAO\TuteurDAO($bdd);
+//if ($etudiantDAO->create($etudiant)) {
+//    echo "Étudiant créé avec succès.";
+//} else {
+//    echo "Erreur lors de la création de l'étudiant.";
+//}
+//$tuteurDAO = new DAO\TuteurDAO($bdd);
 
 //
-$lestuteurs = $tuteurDAO->getById(2);
-var_dump($lestuteurs);
+//$lestuteurs = $tuteurDAO->getById(2);
+//var_dump($lestuteurs);
+
+$arabe = $etudiantDAO->getById(5);
 
 
 
-
-
+var_dump($arabe);

@@ -6,23 +6,60 @@ use BO\Bilan1;
 use PDO;
 
 class Bilan1DAO {
+    private PDO $pdo;
 
+    public function __construct(PDO $pdo) {
+        $this->pdo = $pdo;
+    }
     public function create(Bilan1 $bilan1): bool
     {
         try {
             $burger = "INSERT INTO Bilan1 (notEnt1, notDos1, notOral1, rema1, datBil1, idUti)
                       VALUES (:notEnt1, :notDos1, :notOral1, :rema1, :datBil1, :idUti)";
             $stmt = $this->pdo->prepare($burger);
-            $stmt->bindValue(':notEnt1', $bilan1->getNotEnt1(), PDO::PARAM_STR);
-            $stmt->bindValue(':notDos1', $bilan1->getNotDos1(), PDO::PARAM_STR);
-            $stmt->bindValue(':notOral1', $bilan1->getNotOral1(), PDO::PARAM_STR);
-            $stmt->bindValue(':rema1', $bilan1->getRema1(), PDO::PARAM_STR);
-            $stmt->bindValue(':datBil1', $bilan1->getDatBil1(), PDO::PARAM_STR);
-            $stmt->bindValue(':idUti', $bilan1->getIdUti(), PDO::PARAM_INT);
+            $stmt->bindValue(':notEnt1', $bilan1->getNotEnt(), PDO::PARAM_STR);
+            $stmt->bindValue(':notDos1', $bilan1->getNotDos(), PDO::PARAM_STR);
+            $stmt->bindValue(':notOral1', $bilan1->getNotOral(), PDO::PARAM_STR);
+            $stmt->bindValue(':rema1', $bilan1->getRema(), PDO::PARAM_STR);
+            $stmt->bindValue(':datBil1', $bilan1->getDatVis1()->format('Y-m-d'), PDO::PARAM_STR);
+            $stmt->bindValue(':idUti', $bilan1->getMonEtu()->getMonTuteur()->getIdUti(), PDO::PARAM_INT);
             return $stmt->execute();
         } catch (\Exception $e) {
             echo "Erreur lors de la création du bilan : " . $e->getMessage();
             return false;
+        }
+    }
+    public function getAll(): array {
+        try {
+            $burger = "SELECT * FROM Bilan1";
+            $stmt = $this->pdo->prepare($burger);
+            $stmt->execute();
+            $lesBilans = [];
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $datVis1 = new \DateTime($row['datBil1']);
+                $moyenne = round(($row['notEnt1'] + $row['notDos1'] + $row['notOral1']) / 3, 2);
+                $etudiantDAO = new EtudiantDAO($this->pdo);
+                $monEtu = null;
+                if ($row['idUti']) {
+                    $monEtu = $etudiantDAO->getById($row['idUti']);
+                }
+
+                $bilan = new Bilan1(
+                    $datVis1,
+                    $row['notEnt1'],
+                    $row['idBil1'],
+                    $row['notDos1'],
+                    $row['notOral1'],
+                    $row['rema1'],
+                    $monEtu
+                );
+
+                $lesBilans[] = $bilan;
+            }
+            return $lesBilans;
+        } catch (\Exception $e) {
+            echo "Erreur lors de la récupération des bilans : " . $e->getMessage();
+            return [];
         }
     }
 
@@ -35,17 +72,20 @@ class Bilan1DAO {
             $stmt->execute();
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
             if ($row) {
+                $d = new \DateTime($row['datBil1']);
                 $etudiantDAO = new EtudiantDAO($this->pdo);
-                $monEtu = $etudiantDAO->getById($row['idUti']);
+                $monEtu = null;
+                if ($row['idUti']) {
+                    $monEtu = $etudiantDAO->getById($row['idUti']);
+                }
                 return new Bilan1(
-                    $row['datBil1'],
+                    $d,
                     $row['notEnt1'],
                     $row['idBil1'],
                     $row['notDos1'],
                     $row['notOral1'],
-                    $row['moyBil1'],
                     $row['rema1'],
-                    $monEtu,
+                    $monEtu
                 );
             }
             return null;
@@ -54,13 +94,14 @@ class Bilan1DAO {
             return null;
         }
     }
+
+
     public function update(Bilan1 $bilan): bool {
         try {
             $burger = "UPDATE Bilan1 
                   SET notEnt1 = :notEnt1, 
                       notDos1 = :notDos1, 
                       notOral1 = :notOral1, 
-                      moyBil1 = :moyBil1, 
                       rema1 = :rema1, 
                       datBil1 = :datBil1, 
                       idUti = :idUti
@@ -69,9 +110,8 @@ class Bilan1DAO {
             $stmt->bindValue(':notEnt1', $bilan->getNotEnt(), PDO::PARAM_STR);
             $stmt->bindValue(':notDos1', $bilan->getNotDos(), PDO::PARAM_STR);
             $stmt->bindValue(':notOral1', $bilan->getNotOral(), PDO::PARAM_STR);
-            $stmt->bindValue(':moyBil1', $bilan->getMoyBil(), PDO::PARAM_STR);
             $stmt->bindValue(':rema1', $bilan->getRema(), PDO::PARAM_STR);
-            $stmt->bindValue(':datBil1', $bilan->getDatVis1(), PDO::PARAM_STR);
+            $stmt->bindValue(':datBil1', $bilan->getDatVis1()->format('Y-m-d'), PDO::PARAM_STR);
             $stmt->bindValue(':idUti', $bilan->getMonEtu()->getIdUti(), PDO::PARAM_INT);
             $stmt->bindValue(':idBil1', $bilan->getIdBil(), PDO::PARAM_INT);
             return $stmt->execute();

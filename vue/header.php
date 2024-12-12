@@ -13,13 +13,13 @@
 			</div>
 			<div class="column">
                 <a href="Mesinfos.php">
-                    <p>Mes infos</p>
+                    <p>Mes informations</p>
                 </a>
 			</div>
 			<div class="column">
 			</div>
 			<div class="column-end">
-                <form action="pageConnexion.php">
+                <form action="../controleur/ControleurDeco.php">
                     <input type="submit" value="Se Déconnecter" >
                 </form>
 			</div>

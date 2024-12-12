@@ -2,25 +2,26 @@
 
 namespace BO;
 
-use Cassandra\Date;
+use DateTime;
+
 require_once 'Bilan.php';
 class Bilan1 extends Bilan {
 
-private date $datVis1;
+private datetime $datVis1;
 private float $notEnt;
 
-    public function __construct(date $datVis1, float $notEnt, int $idBil, float $notDos,float $notOral,float $moyBil, string $rema, Etudiant $monEtu ) {
+    public function __construct(dateTime $datVis1, float $notEnt, int $idBil, float $notDos,float $notOral, string $rema, ?Etudiant $monEtu ) {
         $this->datVis1 = $datVis1;
         $this->notEnt = $notEnt;
-    parent::__construct($idBil,$notDos,$notOral,$moyBil,$rema,$monEtu);
+    parent::__construct($idBil,$notDos,$notOral,$rema,$monEtu);
     }
 
-    public function getDatVis1(): Date
+    public function getDatVis1(): DateTime
     {
         return $this->datVis1;
     }
 
-    public function setDatVis1(Date $datVis1): void
+    public function setDatVis1(DateTime $datVis1): void
     {
         $this->datVis1 = $datVis1;
     }

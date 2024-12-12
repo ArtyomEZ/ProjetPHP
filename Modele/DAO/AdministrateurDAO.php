@@ -137,4 +137,19 @@ class AdministrateurDAO {
         }
     }
 
+    public function ConnexionAdministrateur($login, $password) {
+        $query = "SELECT * FROM Utilisateur WHERE logUti = :login AND mdpUti = :password AND idTypUser = 3";
+        $stmt = $this->pdo->prepare($query);
+        $stmt->bindParam(':login', $login);
+        $stmt->bindParam(':password', $password);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC); // Récupère la première ligne comme un tableau associatif
+
+        if ($result) {
+            return $result['idUti']; // Retourne l'ID de l'étudiant
+        } else {
+            return false; // Si aucun utilisateur trouvé
+        }
+
+    }
 }

@@ -7,18 +7,15 @@ class Bilan{
 
     protected float $notDos;
     protected float $notOral;
-
-    protected  float $moyBil;
     protected  string $rema;
 
     protected ?Etudiant $monEtu;
 
-    public function __construct(int $idBil, float $notDos, float $notOral, float $moyBil, string $rema, ?Etudiant $monEtu)
+    public function __construct(int $idBil, float $notDos, float $notOral,string $rema, ?Etudiant $monEtu)
     {
         $this->idBil = $idBil;
         $this->notDos = $notDos;
         $this->notOral = $notOral;
-        $this->moyBil = $moyBil;
         $this->rema = $rema;
         $this->monEtu = $monEtu;
     }
@@ -52,17 +49,6 @@ class Bilan{
     {
         $this->notOral = $notOral;
     }
-
-    public function getMoyBil(): float
-    {
-        return $this->moyBil;
-    }
-
-    public function setMoyBil(float $moyBil): void
-    {
-        $this->moyBil = $moyBil;
-    }
-
     public function getRema(): string
     {
         return $this->rema;
