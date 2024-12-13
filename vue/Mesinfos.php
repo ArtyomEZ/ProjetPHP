@@ -1,8 +1,14 @@
 <?php
 
+require_once 'init.php';
+if (isset($_SESSION['login']) || $_SESSION['role'] !== 'etudiant') {
+    $error = 'Permissions insuffisantes.';
+    header('Location: ../vue/pageConnexion.php?error=' . ($error));
+    exit;
+}
 
 
-include 'header.php';
+include 'headerEtudiant.php';
 
 
 require_once '../Modele\BDDManager.php';
@@ -28,23 +34,23 @@ require_once '../Modele\DAO\EtudiantDAO.php';
 require_once '../Modele\BO\Etudiant.php';
 $bdd = initialiseConnexionBDD();
 $etudiantDAO = new DAO\EtudiantDAO($bdd);
-session_start();
-// Récupérer l'étudiant via son ID
+
+
 $etudiantId = $_SESSION['user_id'];
-if($etudiantId == NULL) {
 
-header('Location: pageConnexion.php');
 
-}else {
-    $etudiant = $etudiantDAO->getById($etudiantId);
-}
+
+
+$etudiant = $etudiantDAO->getById($etudiantId);
 if ($etudiant) {
 
     $entreprise = $etudiant->getMonEntreprise();
 
 
     $maitre = $etudiant->getMonMaiApp();
+
 } else {
+    header('Location: pageConnexion.php');
     echo "Aucun étudiant trouvé avec l'ID spécifié.";
     exit;
 }
@@ -52,9 +58,9 @@ if ($etudiant) {
 
 
 ?>
-?>
 
-<HTML>
+
+    <HTML>
 <head>
     <link rel="stylesheet" href="../css/style.css">
 
@@ -67,7 +73,7 @@ if ($etudiant) {
     <div class="greyboxEt">
         <h1>Mes informations étudiants</h1>
         <div class="whitebox">
-            <form action="pageAccueilTuteur.php" method="post">
+            <form action="pageAccueilEtudiant.php" method="post">
                 <input type="hidden" name="idEtudiant" value="<?php echo htmlspecialchars($etudiant->getIdUti()); ?>">
                 <div class="row">
                     <div class="column">
@@ -117,7 +123,7 @@ if ($etudiant) {
                         <label>Nom :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" value="<?php echo htmlspecialchars($entreprise->getNomEnt()); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($entreprise ? $entreprise->getNomEnt() : 'Aucune entreprise'); ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -125,7 +131,7 @@ if ($etudiant) {
                         <label>Adresse :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" value="<?php echo htmlspecialchars($entreprise->getAdrEnt()); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($entreprise ? $entreprise->getAdrEnt() : ''); ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -133,7 +139,7 @@ if ($etudiant) {
                         <label>Code Postal :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" value="<?php echo htmlspecialchars($entreprise->getCpEnt()); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($entreprise ? $entreprise->getCpEnt() : ''); ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -141,7 +147,7 @@ if ($etudiant) {
                         <label>Ville :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" value="<?php echo htmlspecialchars($entreprise->getVilEnt()); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($entreprise ? $entreprise->getVilEnt() : ''); ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -149,7 +155,7 @@ if ($etudiant) {
                         <label>Nom maître apprentissage :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" value="<?php echo htmlspecialchars($maitre->getNomMai()); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($maitre ? $maitre->getNomMai() : 'Aucun maître d\'apprentissage'); ?>">
                     </div>
                 </div>
 
@@ -158,7 +164,7 @@ if ($etudiant) {
                         <label>Prénom maître apprentissage :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" value="<?php echo htmlspecialchars($maitre->getPreMai()); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($maitre ? $maitre->getPreMai() : ''); ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -166,7 +172,7 @@ if ($etudiant) {
                         <label>Tel maître apprentissage :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" value="<?php echo htmlspecialchars($maitre->getTelMai()); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($maitre ? $maitre->getTelMai() : ''); ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -174,7 +180,7 @@ if ($etudiant) {
                         <label>Mail maître apprentissage :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" value="<?php echo htmlspecialchars($maitre->getMailMai()); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($maitre ? $maitre->getMailMai() : ''); ?>">
                     </div>
                 </div>
 
@@ -200,4 +206,4 @@ if ($etudiant) {
     </div>
 </div>
 </body>
-</HTML>
+    </HTML><?php

@@ -1,3 +1,11 @@
+<?php
+require_once 'init.php';
+if (isset($_SESSION['login']) || $_SESSION['role'] !== 'etudiant') {
+    $error = 'Permissions insuffisantes.';
+    header('Location: ../vue/pageConnexion.php?error='.($error));
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,7 +16,7 @@
 </head>
 <body>
 <?php
-include("header.php");
+include("headerEtudiant.php");
 include("bilans.php");
 ?>
 </body>

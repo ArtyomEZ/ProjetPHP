@@ -143,13 +143,11 @@ class AdministrateurDAO {
         $stmt->bindParam(':login', $login);
         $stmt->bindParam(':password', $password);
         $stmt->execute();
-        $result = $stmt->fetch(PDO::FETCH_ASSOC); // Récupère la première ligne comme un tableau associatif
-
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($result) {
-            return $result['idUti']; // Retourne l'ID de l'étudiant
+            return $result['idUti'];
         } else {
-            return false; // Si aucun utilisateur trouvé
+            return false;
         }
-
     }
 }

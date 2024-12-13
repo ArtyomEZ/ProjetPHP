@@ -1,3 +1,15 @@
+<?php
+require_once 'init.php';
+if (isset($_SESSION['login']) || $_SESSION['role'] !== 'etudiant') {
+    $error = 'Permissions insuffisantes.';
+    header('Location: ../vue/pageConnexion.php?error='.($error));
+    exit;
+}
+?>
+
+
+<link rel="stylesheet" href="../css/style1.css">
+
 <div class="content">
     <h1>
         Bilans

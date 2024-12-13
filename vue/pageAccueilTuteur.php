@@ -1,3 +1,11 @@
+<?php
+require_once 'init.php';
+if (isset($_SESSION['login']) || $_SESSION['role'] !== 'tuteur') {
+    $error = 'Permissions insuffisantes.';
+    header('Location: ../vue/pageConnexion.php?error='.($error));
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,10 +15,10 @@
     <title>Accueil</title>
 </head>
 <body>
-    <?php
-        include("header.php");
-        include("alertes.php");
-        include("listeEleves.php");
-    ?>
+<?php
+include("headerTuteur.php");
+include("alertesTuteur.php");
+include("listeElevesTuteur.php");
+?>
 </body>
 </html>

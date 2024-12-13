@@ -1,5 +1,13 @@
 <?php
 
+require_once 'init.php';
+
+if (isset($_SESSION['login']) || $_SESSION['role'] !== 'admin') {
+    $error = 'Permissions insuffisantes.';
+    header('Location: ../vue/pageConnexion.php?error=' . ($error));
+    exit;
+}
+
 use BO\Administrateur;
 use BO\Alerte;
 use BO\Bilan;
@@ -22,7 +30,6 @@ use DAO\EtudiantDAO;
 use DAO\MaitreApprentissageDAO;
 use DAO\SpecialiteDAO;
 use DAO\TuteurDAO;
-
 
 require_once '../Modele\BDDManager.php';
 require_once '../Modele\DAO\SpecialiteDAO.php';
@@ -47,50 +54,70 @@ require_once '../Modele\DAO\EtudiantDAO.php';
 require_once '../Modele\BO\Etudiant.php';
 require_once '../Modele\BO\Alerte.php';
 require_once '../Modele\DAO\AlerteDAO.php';
-session_start();
+
 $bdd = initialiseConnexionBDD();
+require_once 'init.php';
+$Bilan1DAO = new Bilan1DAO($bdd);
+$Bilan2DAO = new Bilan2DAO($bdd);
 $AlerteDAO = new AlerteDAO($bdd);
-$tuteurDAO = new TuteurDAO($bdd);
-$tuteurId = $_SESSION['user_id'];
-//$pnl = $AlerteDAO->getAlertesBilan1Tuteur($lestuteurs = $tuteurDAO->getById($_SESSION["user_id"]));
-//
-//// Récupérer l'étudiant via son ID
-
-
+$pnl = $AlerteDAO->getAlertesBilan1Admin();
+$pnl2 = $AlerteDAO->getAlertesBilan2Admin();
 
 ?>
+
 <div class="content">
     <h1>Alertes</h1>
     <div class="greybox">
-<!--        --><?php
-//        // Vérifiez si $pnl contient des alertes
-//        if (!empty($pnl)) {
-//            foreach ($pnl as $etudiant) {
-//                // Obtenez les informations de l'étudiant
-//                $nom = $etudiant->getNomUti(); // Nom de l'étudiant
-//                $prenom = $etudiant->getPreUti(); // Prénom de l'étudiant
-//                $monBilan1 = $etudiant->getMonBilan1(); // Bilan 1 associé
-//                // Vérifiez si le Bilan 1 est disponible pour l'étudiant
-//
-//                // Affichez une alerte pour l'étudiant
-//                ?>
+        <?php
+        if (!empty($pnl)) {
+            foreach ($pnl as $etudiant) {
+                $nom = $etudiant->getNomUti();
+                $prenom = $etudiant->getPreUti();
+                $monBilan1 = $etudiant->getMonBilan1();
+                $madatelimite1 = $AlerteDAO->getdatlim1();
+                ?>
                 <div class="alertbox">
                     <div class="alert-logo-space">
                         <img src="../img/logoAlerte.png" alt="logoAlerte" class="infoLogo">
                     </div>
                     <div class="alert-text-start">
-<!--                        <p>--><?php //echo "Élève $nom $prenom - Retard sur le Bilan 1"; ?><!--</p>-->
+                        <p><?php echo " $nom $prenom - Retard sur la visite en entreprise"; ?></p>
                     </div>
                     <div class="alert-text-end">
-<!--                        <p>--><?php //echo '$dateLimite;' ?><!--</p>-->
+                        <p><?= $madatelimite1 ?></p>
                     </div>
                 </div>
                 <?php
-//            }
-//        } else {
-//            // Si aucune alerte n'est trouvée, affichez un message
-//            echo "<p>Aucune alerte trouvée.</p>";
-//        }
-//        ?>
+            }
+        } else {
+            echo "<p>Aucune alertes pour le Bilan 1 trouvées.</p>";
+        }
+        ?>
+
+        <?php
+        if (!empty($pnl2)) {
+            foreach ($pnl2 as $etudiant) {
+                $nom = $etudiant->getNomUti();
+                $prenom = $etudiant->getPreUti();
+                $monBilan2 = $etudiant->getMonBilan2();
+                $madatelimite2 = $AlerteDAO->getdatlim2();
+                ?>
+                <div class="alertbox">
+                    <div class="alert-logo-space">
+                        <img src="../img/logoAlerte.png" alt="logoAlerte" class="infoLogo">
+                    </div>
+                    <div class="alert-text-start">
+                        <p><?php echo " $nom $prenom - Retard sur le sujet de mémoire"; ?></p>
+                    </div>
+                    <div class="alert-text-end">
+                        <p><?= $madatelimite2 ?></p>
+                    </div>
+                </div>
+                <?php
+            }
+        } else {
+            echo "<p>Aucune alertes pour le Bilan 2 trouvées.</p>";
+        }
+        ?>
     </div>
 </div>
