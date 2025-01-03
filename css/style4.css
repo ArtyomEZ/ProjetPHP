@@ -1,0 +1,260 @@
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.row {
+    height: inherit;
+    display: flex;
+}
+
+.column {
+    text-align: center;
+    height: inherit;
+    flex: 50%;
+    align-content: center;
+}
+
+.column-end {
+    height: inherit;
+    flex: 50%;
+    align-content: center;
+    align-items: flex-start;
+}
+
+.column-begin {
+    float:right;
+    height: inherit;
+    flex: 50%;
+    align-content: center;
+    align-items: start;
+}
+
+body
+{
+    background: #FFFDFD;
+    margin: 0;
+    font: 1.2rem Calibri, sans-serif;
+}
+
+body.connexion
+{
+    height: 100vh;
+    width: 100vw;
+}
+
+.header-style
+{
+    background-color: #9ED6A7;
+    border: 4px #9ED6A7;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 98%;
+    flex: 0;
+    flex-direction: row;
+    padding: 1%;
+    align-content: center;
+    vertical-align: center;
+    align-items: center;
+    align-self: center;
+    text-align-last: right;
+}
+
+.header-style p
+{
+    font-weight: bold;
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: underline;
+    font-size: 120%;
+}
+
+.header-style img
+{
+    box-align: auto;
+    vertical-align: center;
+    height: 60px;
+}
+
+.content
+{
+    margin: 96px;
+}
+
+h1
+{
+    font-size: 24px;
+    color: #577A5C;
+
+}
+
+.greybox
+{
+    padding: 10px;
+    background-color: #D9D9D9;
+
+}
+
+.alertbox
+{
+    align-items: center;
+    padding: 8px;
+    margin: 12px;
+    background-color: #FFFDFD;
+    display: flex;
+}
+
+.alert-logo-space
+{
+    flex: 5%;
+}
+
+.alert-text-start
+{
+    flex: 40%;
+    text-align: left;
+}
+
+.alert-text-end
+{
+    flex: 40%;
+    text-align: right;
+}
+
+.whitebox {
+    background-color: #ffffff; /* Fond blanc */
+    padding: 20px; /* Augmente l'espace intérieur */
+    margin: 15px 0; /* Ajoute de l'espace entre les boîtes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour donner du relief */
+    min-height: 50px; /* Minimum pour la hauteur */
+    width: 97%; /* Si tu veux que les boîtes prennent toute la largeur */
+}
+
+/*.whitebox .row {*/
+/*    display: flex;*/
+/*    justify-content: space-between; !* Aligne les éléments à gauche et à droite *!*/
+/*    padding: 5px 0;*/
+/*}*/
+
+.column {
+    padding: 10px; /* Plus d'espace dans les colonnes */
+}
+
+.column-begin {
+    font-weight: bold;
+}
+
+
+hr{
+    border-color: #9ED6A7;
+    background-color: #9ED6A7 ;
+    background-size: 8px;
+    height: 8px;
+}
+
+input
+{
+    float:left;
+    margin: 8px 0;
+    border-radius: 4px;
+}
+
+input:focus
+{
+    font-size: 16px;
+    float:left;
+    border-color: Lightgrey;
+    border-radius: 5px;
+}
+
+
+input[type=text]
+{
+
+    padding: 8px 4px;
+    border-radius: 8px;
+}
+
+input[type=password]
+{
+    float:left;
+    padding: 8px 4px;
+    border-radius: 8px;
+}
+
+input[type=submit]
+{
+    float:left;
+    margin: 8px 8px 0px 15vw;
+    padding: 8px 20px;
+    border-radius: 8px;
+    background-color: white;
+    font: 1.2rem "Fira Sans", sans-serif;
+}
+
+img.img-30pc
+{
+    margin: 30%;
+    width:250px;
+    height: 250px;
+}
+
+img.infoLogo
+{
+    width:50px;
+    height:50px;
+}
+img.header-logo
+{
+    float: left;
+    vertical-align: center;
+    height: 60px;
+}
+
+.form-style
+{
+    padding: 5vh;
+    align-content: center;
+    height: inherit;
+    background-color: #9ED6A7;
+    border: 4px #9ED6A7;
+}
+table
+{
+    text-align: center;
+    letter-spacing: 0px;
+    width:100%;
+    font-size: 2.3vh;
+    border: 2px solid;
+}
+thead
+{
+    background-color: #D9D9D9;
+}
+
+label
+{
+    font-weight: bold;
+}
+.greyboxEt
+{
+    padding: 4px;
+    background-color: #D9D9D9;
+    margin: 240px;
+    margin-bottom: 50svh;
+
+}
+.button
+{
+    float:left;
+    margin: 8px 8px 0px 15vw;
+    padding: 8px 20px;
+    border-radius: 8px;
+    background-color: white;
+    font: 1.2rem "Fira Sans", sans-serif;
+}

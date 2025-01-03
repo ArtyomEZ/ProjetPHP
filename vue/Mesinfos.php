@@ -104,8 +104,9 @@ if ($etudiant) {
                         <label>Adresse :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" value="<?php echo htmlspecialchars($etudiant->getAdrUti()); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($etudiant->getAdrUti()), htmlspecialchars($etudiant->getVilUti()) ?>">
                     </div>
+
                 </div>
                 <div class="row">
                     <div class="column">

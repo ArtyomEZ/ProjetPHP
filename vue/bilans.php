@@ -24,7 +24,7 @@ if (isset($_SESSION['login']) || $_SESSION['role'] !== 'etudiant') {
                     </h2>
                     <br>
                     <br>
-                    <form action="">
+                    <form action="bilan1.php">
                         <input type="submit" class="sub-center" value="Voir">
                     </form>
                     <br>
@@ -40,7 +40,7 @@ if (isset($_SESSION['login']) || $_SESSION['role'] !== 'etudiant') {
                     </h2>
                     <br>
                     <br>
-                    <form action="">
+                    <form action="bilan2.php">
                         <input type="submit" class="sub-center" value="Voir">
                     </form>
                     <br>

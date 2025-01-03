@@ -93,6 +93,9 @@ $etudiant = $etudiantdao->getAll();
                     <th>
                         Classe
                     </th>
+                    <th>
+                        Tuteur
+                    </th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -115,6 +118,9 @@ $etudiant = $etudiantdao->getAll();
                         </td>
                         <td>
                             <?php echo htmlspecialchars($pnl->getMaClasse() ? $pnl->getMaClasse()->getNomCla() : 'Aucune'); ?>
+                        </td>
+                        <td>
+                            <?php echo $pnl->getMonTuteur()->getNomUti(); ?>
                         </td>
                         <td>
                             <a href="">+info</a>

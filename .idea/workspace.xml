@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee939c53-e70e-42bb-912e-c487d1df4b7a" name="Changes" comment="" />
+    <list default="true" id="ee939c53-e70e-42bb-912e-c487d1df4b7a" name="Changes" comment="LOT 4" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +12,16 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Modele/DAO/TuteurDAO.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
@@ -21,6 +31,7 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2gEZxqown5gPDqbzvA94y61e11c" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -30,7 +41,9 @@
     &quot;PHP Script.test.php.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Programmation/PHP/Laravel-main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/wamp64/www/php/Blog&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -81,11 +94,32 @@
       <workItem from="1733941850666" duration="4592000" />
       <workItem from="1733951921645" duration="5623000" />
       <workItem from="1733991735014" duration="6871000" />
-      <workItem from="1734009002321" duration="7759000" />
+      <workItem from="1734009002321" duration="8449000" />
+      <workItem from="1734083553178" duration="568000" />
+      <workItem from="1734087329319" duration="467000" />
+      <workItem from="1734380314522" duration="3870000" />
+      <workItem from="1734449722415" duration="7468000" />
+      <workItem from="1734513987465" duration="2238000" />
+      <workItem from="1735508538145" duration="263000" />
+      <workItem from="1735731891759" duration="990000" />
+      <workItem from="1735897382887" duration="5237000" />
     </task>
+    <task id="LOCAL-00001" summary="LOT 4">
+      <option name="closed" value="true" />
+      <created>1735902585428</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735902585428</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="LOT 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="LOT 4" />
   </component>
 </project>
