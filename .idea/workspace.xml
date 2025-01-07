@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee939c53-e70e-42bb-912e-c487d1df4b7a" name="Changes" comment="LOT 4" />
+    <list default="true" id="ee939c53-e70e-42bb-912e-c487d1df4b7a" name="Changes" comment="LOT 4">
+      <change afterPath="$PROJECT_DIR$/controleur/ControlerAjtTuteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controleur/ControlerUpdateEtudiant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controleur/ControlerUpdateTuteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controleur/ControleurAjtEleve.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/style3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/MesinfoTuteur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/parametreAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/parametreAdmin.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +61,16 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="ControleurAjtEleve.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/controleur/ControleurAjtEleve.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.ControleurAjtEleve.php" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -103,6 +121,12 @@
       <workItem from="1735508538145" duration="263000" />
       <workItem from="1735731891759" duration="990000" />
       <workItem from="1735897382887" duration="5237000" />
+      <workItem from="1735909568938" duration="4782000" />
+      <workItem from="1736077672431" duration="7365000" />
+      <workItem from="1736094253598" duration="4964000" />
+      <workItem from="1736150587688" duration="4239000" />
+      <workItem from="1736241292182" duration="1609000" />
+      <workItem from="1736255260605" duration="5800000" />
     </task>
     <task id="LOCAL-00001" summary="LOT 4">
       <option name="closed" value="true" />

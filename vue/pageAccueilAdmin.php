@@ -21,5 +21,7 @@ include("../vue/headerAdmin.php");
 include("../vue/alertesAdmin.php");
 include("../vue/listeEleves.php");
 ?>
+
+<a href="parametreAdmin.php">Paramètre Admin</a>
 </body>
 </html>

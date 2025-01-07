@@ -20,7 +20,7 @@ if (isset($_SESSION['login']) || $_SESSION['role'] !== 'tuteur') {
             </a>
         </div>
         <div class="column">
-            <a href="">
+            <a href="MesinfoTuteur.php">
                 <p>Mes informations</p>
             </a>
         </div>
