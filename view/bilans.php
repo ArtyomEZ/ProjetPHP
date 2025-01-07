@@ -19,8 +19,6 @@
                 </div>
             </div>
             <div class="column">
-            </div>
-            <div class="column">
                 <div class="whitebox">
                     <br>
                     <h2>
