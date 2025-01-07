@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2024-10-27" view-index="0" gantt-divider-location="351" resource-divider-location="300" version="3.3.3300" locale="en_US">
+    <description/>
+    <view zooming-state="default:6" id="gantt-chart">
+        <field id="tpd3" name="Name" width="200" order="0"/>
+        <field id="tpd4" name="Begin date" width="75" order="1"/>
+        <field id="tpd5" name="End date" width="75" order="2"/>
+        <field id="tpd15" name="Notes" width="20" order="3"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <timeline><![CDATA[30,27,28]]></timeline>
+        <option id="color.recent"><![CDATA[#99ff99 #33ff33 #33ff00]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="206" order="0"/>
+        <field id="1" name="Default role" width="90" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="b0201519e1ad405d848391f6d1b12e28" name="Analyse du projet" meeting="false" start="2024-10-15" duration="1" complete="0" expand="true">
+            <depend id="1" type="2" difference="0" hardness="Strong"/>
+            <depend id="30" type="2" difference="0" hardness="Strong"/>
+            <depend id="73" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="1" uid="cb82c098914e4864b4b650123e62110d" name="Lot 1" meeting="false" start="2024-10-31" duration="7" complete="0" expand="true">
+            <depend id="13" type="2" difference="0" hardness="Strong"/>
+            <depend id="14" type="2" difference="0" hardness="Strong"/>
+            <depend id="17" type="2" difference="0" hardness="Strong"/>
+            <depend id="20" type="2" difference="0" hardness="Strong"/>
+            <depend id="23" type="2" difference="0" hardness="Strong"/>
+            <depend id="45" type="2" difference="0" hardness="Strong"/>
+            <depend id="47" type="2" difference="0" hardness="Strong"/>
+            <depend id="49" type="2" difference="0" hardness="Strong"/>
+            <depend id="51" type="2" difference="0" hardness="Strong"/>
+            <task id="37" uid="6ab7e76c71704fd6b314077042fe6966" name="Back" meeting="false" start="2024-10-31" duration="7" complete="0" thirdDate="2024-10-31" thirdDate-constraint="0" expand="false">
+                <task id="40" uid="faa3dc83c9f446448dcfeb807e348f41" name="Arborecsence" meeting="false" start="2024-11-07" duration="1" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true"/>
+                <task id="38" uid="c2dbb2dbb6314b148e06a842be1f26f7" name="BO" meeting="false" start="2024-10-31" duration="5" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true">
+                    <depend id="39" type="2" difference="0" hardness="Strong"/>
+                    <depend id="40" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="39" uid="1e0a9787086744ab944f4aa02fae0813" name="STDF" meeting="false" start="2024-11-07" duration="2" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="31" uid="1bfc9c09f8054968a8d584ed0702fde4" name="Front" meeting="false" start="2024-10-31" duration="7" complete="0" thirdDate="2024-10-31" thirdDate-constraint="0" expand="false">
+                <task id="29" uid="679ec47ac72b4e1cacfd15f7ad703d83" name="Front STFD" color="#33ff33" meeting="false" start="2024-11-07" duration="2" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true"/>
+                <task id="28" uid="a1d7657962d74d4fb17d79d9efd0cf88" name="Maquette" color="#33ff00" meeting="false" start="2024-10-31" duration="5" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true">
+                    <depend id="29" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="32" uid="e721ef5db87f4d968e99345858a97cd2" name="Bdd" meeting="false" start="2024-10-31" duration="7" complete="0" thirdDate="2024-10-31" thirdDate-constraint="0" expand="false">
+                <task id="34" uid="2e85c429be6243ca9030cea492820320" name="MCD" meeting="false" start="2024-11-05" duration="2" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true">
+                    <depend id="36" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="36" uid="0f88c0356f7e40af9b0f92645605a1af" name="BDD STDF" meeting="false" start="2024-11-07" duration="2" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true"/>
+                <task id="33" uid="285a1543a89d44b6aa66237ea0260de0" name="Dictionnaire de données" meeting="false" start="2024-10-31" duration="3" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true">
+                    <depend id="34" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="30" uid="7bc07fdc7a024f8886d0ae8d048d752d" name="Chef De Projet" meeting="false" start="2024-10-31" duration="6" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true">
+                <task id="7" uid="acba00015477478a980cc5518a5af8b2" name="Mêlée" color="#000000" meeting="true" start="2024-11-08" duration="0" complete="0" thirdDate="2024-11-08" thirdDate-constraint="0" expand="true"/>
+                <task id="25" uid="6f7956ab79d342678456c4978005f632" name="GitLab" meeting="false" start="2024-11-05" duration="1" complete="0" thirdDate="2024-10-07" thirdDate-constraint="0" expand="true"/>
+                <task id="26" uid="261e4405736944bcb4215017c07cd313" name="Trello" meeting="false" start="2024-11-05" duration="1" complete="0" thirdDate="2024-11-04" thirdDate-constraint="0" expand="true"/>
+                <task id="27" uid="6201ba13d7d04cc098ae5143b53d5930" name="Planning" meeting="false" start="2024-10-31" duration="3" complete="0" thirdDate="2024-11-04" thirdDate-constraint="0" expand="true">
+                    <depend id="25" type="2" difference="0" hardness="Strong"/>
+                    <depend id="26" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="12" uid="946dd7643e0148928434950905019ce7" name="STFD" meeting="false" start="2024-11-05" duration="3" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+        <task id="13" uid="bc57faa19df54389a6e54bcca123f6b0" name="Lot 2" color="#000000" meeting="false" start="2024-11-11" duration="10" complete="0" expand="false">
+            <depend id="16" type="2" difference="0" hardness="Strong"/>
+            <depend id="57" type="2" difference="0" hardness="Strong"/>
+            <depend id="58" type="2" difference="0" hardness="Strong"/>
+            <depend id="60" type="2" difference="0" hardness="Strong"/>
+            <depend id="61" type="2" difference="0" hardness="Strong"/>
+            <task id="44" uid="67c99bab44184581952d58bd3d12d8c6" name="Back" meeting="false" start="2024-11-11" duration="9" complete="0" thirdDate="2024-11-11" thirdDate-constraint="0" expand="false">
+                <task id="52" uid="7129425ae154425baf7270101c805887" name="CRUD DAO" meeting="false" start="2024-11-15" duration="5" complete="0" thirdDate="2024-11-08" thirdDate-constraint="0" expand="true"/>
+                <task id="51" uid="09b80f90f82b4e0dbb718158a1fe75f2" name="Réalisation bo" meeting="false" start="2024-11-11" duration="4" complete="0" thirdDate="2024-11-08" thirdDate-constraint="0" expand="true">
+                    <depend id="52" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="43" uid="a991253a52414cffba7cbe5e6bb22d99" name="BDD" meeting="false" start="2024-11-11" duration="9" complete="0" thirdDate="2024-11-11" thirdDate-constraint="0" expand="true">
+                <task id="48" uid="93389cd4a43b4228a190113d77a2b972" name="Alimentation BDD" meeting="false" start="2024-11-15" duration="5" complete="0" thirdDate="2024-11-08" thirdDate-constraint="0" expand="true"/>
+                <task id="47" uid="1ab6a516c5c14b3d813bc4f1c113419d" name="jeu de données" meeting="false" start="2024-11-11" duration="4" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true">
+                    <depend id="48" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="42" uid="2545aa853ec44b95a7f0272b249ccf17" name="Front" meeting="false" start="2024-11-11" duration="9" complete="0" thirdDate="2024-11-11" thirdDate-constraint="0" expand="false">
+                <task id="50" uid="c6871d910298463cbf59e46f920fd911" name="Page d'accueil view" meeting="false" start="2024-11-15" duration="5" complete="0" thirdDate="2024-11-08" thirdDate-constraint="0" expand="true"/>
+                <task id="49" uid="97274037d95048b296c75e9d3b5c2c23" name="Création Css" meeting="false" start="2024-11-11" duration="4" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true">
+                    <depend id="50" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="41" uid="c4907d4c5d574e0c8a5af92ad11d2253" name="Chef de Projet" meeting="false" start="2024-11-11" duration="9" complete="0" expand="false">
+                <depend id="15" type="2" difference="0" hardness="Strong"/>
+                <task id="46" uid="afd207eed8cc465a9d5af9bdc4d084bc" name="Test CRUD" meeting="false" start="2024-11-18" duration="4" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true"/>
+                <task id="45" uid="24ee52e2ef7c42f394acf21ecfd0c2ab" name="cahier des tests" meeting="false" start="2024-11-11" duration="5" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true">
+                    <depend id="46" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="14" uid="94e225c26a594916ba9cbf459460da29" name="Préparation Appli" color="#8cb6ce" meeting="false" start="2024-11-11" duration="10" complete="0" thirdDate="2024-11-08" thirdDate-constraint="0" expand="true"/>
+            <task id="15" uid="7904ec3e643044e9b2e81227fa4bc2db" name="Mêlée" color="#000000" meeting="true" start="2024-11-22" duration="0" complete="0" thirdDate="2024-11-21" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="16" uid="5ccb5be2643a49c9b68b4a3cc9ba8d0a" name="Lot 3" color="#000000" meeting="false" start="2024-11-25" duration="10" complete="0" expand="false">
+            <depend id="19" type="2" difference="0" hardness="Strong"/>
+            <depend id="64" type="2" difference="0" hardness="Strong"/>
+            <depend id="65" type="2" difference="0" hardness="Strong"/>
+            <depend id="68" type="2" difference="0" hardness="Strong"/>
+            <depend id="70" type="2" difference="0" hardness="Strong"/>
+            <task id="53" uid="a2f2aa04d66a434f858791ca83475313" name="Chef de projet" meeting="false" start="2024-11-25" duration="9" complete="0" thirdDate="2024-11-22" thirdDate-constraint="0" expand="false">
+                <task id="57" uid="45b0f1a755c14ed9a586ab7a4e35192a" name="Page info étudiant" meeting="false" start="2024-11-25" duration="9" complete="0" thirdDate="2024-11-22" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="54" uid="daef9b80bc7d413ca5df96f4b7bd5666" name="BDD" meeting="false" start="2024-11-25" duration="10" complete="0" expand="false">
+                <task id="58" uid="f917de0763b54af4a26beed89c247b13" name="Page connexion" meeting="false" start="2024-11-25" duration="5" complete="0" thirdDate="2024-11-22" thirdDate-constraint="0" expand="true">
+                    <depend id="59" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="59" uid="e48d38da89dc4b838847a962042007d8" name="Gestion Session" meeting="false" start="2024-12-02" duration="5" complete="0" thirdDate="2024-11-22" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="55" uid="d2cc31b2a4964718ba7fe6a345d022de" name="Front" meeting="false" start="2024-11-25" duration="9" complete="0" expand="false">
+                <task id="60" uid="8c554112ff334959a72a341b5d88936c" name="Liste étudiant" meeting="false" start="2024-11-25" duration="9" complete="0" thirdDate="2024-11-22" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="56" uid="e0ac95ce424842718de29350f2a6a325" name="Back" meeting="false" start="2024-11-25" duration="9" complete="0" expand="true">
+                <task id="61" uid="7c18637fb4fa4b8da511ae302f0f36ae" name="Page alerte" meeting="false" start="2024-11-25" duration="9" complete="0" thirdDate="2024-11-22" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="17" uid="b85bc3f7a339415d9a8fd10d440ff3f5" name="Début des écrans" color="#8cb6ce" meeting="false" start="2024-11-25" duration="10" complete="0" thirdDate="2024-11-22" thirdDate-constraint="0" expand="true"/>
+            <task id="18" uid="6f7fe546c22547fd9e8f5232cc2d6a77" name="Mêlée" color="#000000" meeting="true" start="2024-12-06" duration="0" complete="0" thirdDate="2024-12-06" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="19" uid="db38709fd0ef496ea2348d0ff758cdcb" name="Lot 4" color="#000000" meeting="false" start="2024-12-09" duration="11" complete="0" expand="true">
+            <depend id="22" type="2" difference="0" hardness="Strong"/>
+            <depend id="72" type="2" difference="0" hardness="Strong"/>
+            <depend id="74" type="2" difference="0" hardness="Strong"/>
+            <depend id="77" type="2" difference="0" hardness="Strong"/>
+            <depend id="80" type="2" difference="0" hardness="Strong"/>
+            <task id="69" uid="c8fba9f4e910427aab32d750f0bc823c" name="Back" meeting="false" start="2024-12-09" duration="10" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="false">
+                <task id="70" uid="6b6d52bd1f234a84ba23fe064b3b6fa7" name="detail étudiant" meeting="false" start="2024-12-09" duration="10" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="67" uid="8dc73710513b41d1a6e5bf1f3c074d3f" name="Front" meeting="false" start="2024-12-09" duration="10" complete="0" thirdDate="2024-12-06" thirdDate-constraint="0" expand="false">
+                <task id="68" uid="e70f34f425e84f789551ecd28b9e7ca1" name="Bilan 1 &amp; 2" meeting="false" start="2024-12-09" duration="10" complete="0" thirdDate="2024-12-06" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="65" uid="1518c4983ad04c58b389bff8d9655760" name="BDD" meeting="false" start="2024-12-09" duration="11" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true">
+                <task id="66" uid="274d28ba787542c69116a525a86b6788" name="Information tuteur" meeting="false" start="2024-12-09" duration="11" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="62" uid="bbb77c97f6ae42bd9aaf20c294ed176d" name="Chef de projet" meeting="false" start="2024-12-09" duration="11" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="false">
+                <task id="21" uid="ec123c551bcc43c4a230a4d7d30bee37" name="Mêlée" color="#000000" meeting="true" start="2024-12-20" duration="0" complete="0" thirdDate="2024-12-20" thirdDate-constraint="0" expand="true"/>
+                <task id="64" uid="e7d454e22cb4491aa30e3d9e1f5cc48d" name="Page paramètre" meeting="false" start="2024-12-09" duration="5" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true">
+                    <depend id="63" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="63" uid="f4ff92a0673747d1b28d3f785d4d2d1c" name="Page mes Bilans" meeting="false" start="2024-12-16" duration="6" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="20" uid="8f8c8acb4f6e40d98efa5fb90ee210e9" name="Suite de l'application" color="#8cb6ce" meeting="false" start="2024-12-09" duration="10" complete="0" expand="true"/>
+        </task>
+        <task id="22" uid="1dc58ba315334117b2eaee927c286f0e" name="Lot 5" color="#000000" meeting="false" start="2024-12-24" duration="13" complete="0" expand="false">
+            <task id="79" uid="6eb957e156e7441e95811caea995d996" name="Back" meeting="false" start="2024-12-24" duration="12" complete="0" thirdDate="2024-12-23" thirdDate-constraint="0" expand="false">
+                <task id="81" uid="c7e946840db843118bc64d3fc9895ee2" name="Gestion étudiant" meeting="false" start="2025-01-01" duration="6" complete="0" thirdDate="2024-12-23" thirdDate-constraint="0" expand="true"/>
+                <task id="80" uid="3896a8fc80144684ae3a2f117a9b57b1" name="Affectation tuteur étudiant" meeting="false" start="2024-12-24" duration="6" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true">
+                    <depend id="81" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="76" uid="53389f86800543b8a0c518edbb23a7ea" name="Front" meeting="false" start="2024-12-24" duration="12" complete="0" thirdDate="2024-12-23" thirdDate-constraint="0" expand="false">
+                <task id="78" uid="c5d57ff55df64f6a95b846a5c068a8d2" name="Conformité page" meeting="false" start="2025-01-01" duration="6" complete="0" thirdDate="2024-12-23" thirdDate-constraint="0" expand="true"/>
+                <task id="77" uid="5474eda5bab147eaacbe610acec8dfcd" name="Paramètre Géneraux" meeting="false" start="2024-12-24" duration="6" complete="0" thirdDate="2024-12-23" thirdDate-constraint="0" expand="true">
+                    <depend id="78" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="73" uid="5542e1f882c74d67a97f568c163112d7" name="BDD" meeting="false" start="2024-12-24" duration="12" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true">
+                <task id="75" uid="7540a6e66b844e0a8da9bc287d1560f6" name="Mes bilans étudiant" meeting="false" start="2025-01-01" duration="6" complete="0" thirdDate="2024-12-23" thirdDate-constraint="0" expand="true"/>
+                <task id="74" uid="09deb3eab7884c7897651ec55715e9d3" name="Accueil étudiant &amp; admin" meeting="false" start="2024-12-24" duration="6" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true">
+                    <depend id="75" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="71" uid="1d5f209070f445c8b321ef1d2018d332" name="Chef de Projet" meeting="false" start="2024-12-24" duration="13" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true">
+                <task id="24" uid="ff102684006e4995bd39cdad0bde4fac" name="Livraison" color="#000000" meeting="true" start="2025-01-10" duration="0" complete="0" thirdDate="2025-01-09" thirdDate-constraint="0" expand="true"/>
+                <task id="23" uid="4517b36a7b2f461aac9839268da78562" name="Fin de l'application" color="#8cb6ce" meeting="false" start="2024-12-24" duration="13" complete="0" thirdDate="2024-12-23" thirdDate-constraint="0" expand="true">
+                    <depend id="24" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="72" uid="b4415b0155f64d058d36ba744ecf9dcc" name="Gestion tuteur" meeting="false" start="2024-12-24" duration="12" complete="0" thirdDate="2024-10-28" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="CP &amp; DevOps" function="Default:1" contacts="" phone=""/>
+        <resource id="1" name="Res. BDD" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="Dev Front-End" function="Default:0" contacts="" phone=""/>
+        <resource id="3" name="Dev Back-End" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="25" resource-id="0" function="Default:1" responsible="true" load="25.0"/>
+        <allocation task-id="7" resource-id="0" function="Default:1" responsible="true" load="25.0"/>
+        <allocation task-id="26" resource-id="0" function="Default:1" responsible="true" load="25.0"/>
+        <allocation task-id="27" resource-id="0" function="Default:1" responsible="true" load="50.0"/>
+        <allocation task-id="12" resource-id="0" function="Default:1" responsible="true" load="25.0"/>
+        <allocation task-id="62" resource-id="0" function="Default:1" responsible="true" load="50.0"/>
+        <allocation task-id="63" resource-id="0" function="Default:1" responsible="true" load="25.0"/>
+        <allocation task-id="64" resource-id="0" function="Default:1" responsible="true" load="25.0"/>
+        <allocation task-id="71" resource-id="0" function="Default:1" responsible="true" load="25.0"/>
+        <allocation task-id="72" resource-id="0" function="Default:1" responsible="true" load="25.0"/>
+        <allocation task-id="46" resource-id="0" function="Default:1" responsible="true" load="50.0"/>
+        <allocation task-id="45" resource-id="0" function="Default:1" responsible="true" load="50.0"/>
+        <allocation task-id="15" resource-id="0" function="Default:1" responsible="true" load="50.0"/>
+        <allocation task-id="14" resource-id="0" function="Default:1" responsible="true" load="25.0"/>
+        <allocation task-id="53" resource-id="0" function="Default:1" responsible="true" load="75.0"/>
+        <allocation task-id="57" resource-id="0" function="Default:1" responsible="true" load="25.0"/>
+        <allocation task-id="18" resource-id="0" function="Default:1" responsible="true" load="25.0"/>
+        <allocation task-id="30" resource-id="0" function="Default:1" responsible="true" load="25.0"/>
+        <allocation task-id="21" resource-id="0" function="Default:1" responsible="true" load="25.0"/>
+        <allocation task-id="24" resource-id="0" function="Default:1" responsible="true" load="25.0"/>
+        <allocation task-id="23" resource-id="0" function="Default:1" responsible="true" load="25.0"/>
+        <allocation task-id="32" resource-id="1" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="65" resource-id="1" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="66" resource-id="1" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="73" resource-id="1" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="75" resource-id="1" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="74" resource-id="1" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="34" resource-id="1" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="36" resource-id="1" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="33" resource-id="1" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="43" resource-id="1" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="48" resource-id="1" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="47" resource-id="1" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="14" resource-id="1" function="Default:0" responsible="false" load="25.0"/>
+        <allocation task-id="58" resource-id="1" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="59" resource-id="1" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="67" resource-id="2" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="68" resource-id="2" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="76" resource-id="2" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="78" resource-id="2" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="77" resource-id="2" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="31" resource-id="2" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="29" resource-id="2" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="28" resource-id="2" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="42" resource-id="2" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="50" resource-id="2" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="49" resource-id="2" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="14" resource-id="2" function="Default:0" responsible="false" load="25.0"/>
+        <allocation task-id="60" resource-id="2" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="69" resource-id="3" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="70" resource-id="3" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="80" resource-id="3" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="81" resource-id="3" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="79" resource-id="3" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="37" resource-id="3" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="40" resource-id="3" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="38" resource-id="3" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="39" resource-id="3" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="44" resource-id="3" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="52" resource-id="3" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="51" resource-id="3" function="Default:0" responsible="true" load="25.0"/>
+        <allocation task-id="14" resource-id="3" function="Default:0" responsible="false" load="25.0"/>
+        <allocation task-id="17" resource-id="3" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="61" resource-id="3" function="Default:0" responsible="true" load="50.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
