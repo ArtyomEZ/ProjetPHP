@@ -55,13 +55,9 @@ require_once '../Modele\DAO\AlerteDAO.php';
 
 $bdd = initialiseConnexionBDD();
 require_once 'init.php';
-$Bilan1DAO = new Bilan1DAO($bdd);
-$Bilan2DAO = new Bilan2DAO($bdd);
 $AlerteDAO = new AlerteDAO($bdd);
 $tuteurDAO = new TuteurDAO($bdd);
 $idtuteur = $_SESSION['user_id'];
-$monBilan1 = $Bilan1DAO->getAll();
-$monBilan2 = $Bilan2DAO->getAll();
 $pnl = $AlerteDAO->getAlertesBilan1Tuteur($lestuteurs = $tuteurDAO->getById($idtuteur));
 $pnl2 = $AlerteDAO->getAlertesBilan2Tuteur($lestuteurs = $tuteurDAO->getById($idtuteur));
 ?>

@@ -9,8 +9,13 @@
       <change afterPath="$PROJECT_DIR$/controleur/ControlerUpdateEtudiant.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/controleur/ControlerUpdateTuteur.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/controleur/ControleurAjtEleve.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/pageAcceuilEtu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/pageAccueilAdm.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/css/style3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/MesinfoTuteur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style4.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style4.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/bilan1.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/bilan1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/bilan2.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/bilan2.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/parametreAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/parametreAdmin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +131,9 @@
       <workItem from="1736094253598" duration="4964000" />
       <workItem from="1736150587688" duration="4239000" />
       <workItem from="1736241292182" duration="1609000" />
-      <workItem from="1736255260605" duration="5800000" />
+      <workItem from="1736255260605" duration="6318000" />
+      <workItem from="1736323897398" duration="7131000" />
+      <workItem from="1736354988422" duration="3427000" />
     </task>
     <task id="LOCAL-00001" summary="LOT 4">
       <option name="closed" value="true" />

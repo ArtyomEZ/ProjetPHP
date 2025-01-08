@@ -38,7 +38,10 @@ if (
     isset($_POST['prenomEtudiant']) && !empty($_POST['prenomEtudiant']) &&
     isset($_POST['telephoneEtudiant']) && !empty($_POST['telephoneEtudiant']) &&
     isset($_POST['adresseEtudiant']) && !empty($_POST['adresseEtudiant']) &&
-    isset($_POST['mailEtudiant']) && !empty($_POST['mailEtudiant'])
+    isset($_POST['ville']) && !empty($_POST['ville']) &&
+    isset($_POST['mailEtudiant']) && !empty($_POST['mailEtudiant']) &&
+    isset($_POST['codePostal']) && !empty($_POST['codePostal'])
+
 ) {
     // ✅ Récupération des données de l'étudiant
     $nom = htmlspecialchars($_POST['nomEtudiant']);
@@ -46,6 +49,8 @@ if (
     $telephone = htmlspecialchars($_POST['telephoneEtudiant']);
     $adresse = htmlspecialchars($_POST['adresseEtudiant']);
     $mail = htmlspecialchars($_POST['mailEtudiant']);
+    $villes = htmlspecialchars($_POST['ville'] );
+    $codepostale = htmlspecialchars($_POST['codePostal'] );
 
     // ✅ Récupération des données de l'entreprise
     $nomE = htmlspecialchars($_POST['nomEntreprise'] ?? '');
@@ -65,7 +70,12 @@ if (
         $preM = htmlspecialchars($_POST['prenomMaitreApprentissage'] ?? '');
         $telM = htmlspecialchars($_POST['telephoneMaitreApprentissage'] ?? '');
         $mailM = htmlspecialchars($_POST['mailMaitreApprentissage'] ?? '');
+        $idClasse = (int)$_POST['classeTuteur'];
 
+        // Récupérer la classe depuis la BD
+        //
+        $classeDAO = new \DAO\ClasseDAO($bdd);
+        $classe = $classeDAO->getById($idClasse);
         $maitre = new MaitreApprentissage(0, $nomM, $preM, $telM, $mailM, $entreprise);
         $maitredao = new \DAO\MaitreApprentissageDAO($bdd);
 
@@ -74,14 +84,12 @@ if (
             $maitre = new MaitreApprentissage($idMaitre, $nomM, $preM, $telM, $mailM, $entreprise);
 
             // ✅ Champs par défaut
-            $codePostal = 'null';
-            $villes = 'null';
+
             $login = 'null';
             $mdp = 'null';
             $specialite = new Specialite(1, 'null');
             $date = new DateTime('2024-12-02');
             $tuteur = new Tuteur(0, 0, 0, 1, 'null', 'null', 'null', 'null', 'null', 'null', 'null0', 'null', 'null');
-            $classe = new Classe(1, 'null', 0);
             $bilan1 = new Bilan1($date, 0, 0, 0, 0, 'rien', null);
             $bilan2 = new \BO\Bilan2('null', $date, 0, 0, 0, 'rien', null);
 
@@ -102,32 +110,38 @@ if (
                 $mail,
                 $telephone,
                 $adresse,
-                $codePostal,
+                $codepostale,
                 $villes,
                 $login,
                 $mdp
             );
 
-
             if ($etudiantDAO->create($etudiant)) {
-                header('Location: ../vue/pageAccueilAdmin.php');
 
+                $modif = "Eleve ajouté avec succès";
+                header('Location: ../vue/parametreAdmin.php?modif='. urlencode($modif));
             } else {
-                header('Location: ../vue/parametreAdmin.php');
-                echo "❌ L'élève {$prenom} {$nom} n'a pas pu être ajouté.";
+
+                $modif =  "❌ L'élève {$prenom} {$nom} n'a pas pu être ajouté.";
+                header('Location: ../vue/parametreAdmin.php?modif='. urlencode($modif));
+
             }
 
         } else {
-            header('Location: ../vue/parametreAdmin.php');
-            echo "❌ Erreur dans la création du maître d'apprentissage.";
+
+            $modif = "❌ Erreur dans la création du maître d'apprentissage.";
+            header('Location: ../vue/parametreAdmin.php?modif='. urlencode($modif));
         }
 
     } else {
-        header('Location: ../vue/parametreAdmin.php');
-        echo "❌ Erreur dans la création de l'entreprise.";
+
+        $modif = "❌ Erreur dans la création de l'entreprise.";
+        header('Location: ../vue/parametreAdmin.php?modif='. urlencode($modif));
     }
 
 } else {
-    header('Location: ../vue/parametreAdmin.php');
-    echo "❌ Veuillez remplir tous les champs obligatoires de l'étudiant.";
+
+    $modif = "❌ Veuillez remplir tous les champs obligatoires de l'étudiant.";
+    header('Location: ../vue/parametreAdmin.php?modif='. urlencode($modif));
+
 }

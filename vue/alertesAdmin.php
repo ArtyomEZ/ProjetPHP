@@ -57,8 +57,6 @@ require_once '../Modele\DAO\AlerteDAO.php';
 
 $bdd = initialiseConnexionBDD();
 require_once 'init.php';
-$Bilan1DAO = new Bilan1DAO($bdd);
-$Bilan2DAO = new Bilan2DAO($bdd);
 $AlerteDAO = new AlerteDAO($bdd);
 $pnl = $AlerteDAO->getAlertesBilan1Admin();
 $pnl2 = $AlerteDAO->getAlertesBilan2Admin();

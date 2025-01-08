@@ -35,7 +35,7 @@ class Etudiant extends Utilisateur {
         $this->altUti = $altUti;
     }
 
-    public function getMonTuteur(): Tuteur
+    public function getMonTuteur(): ?Tuteur
     {
         return $this->monTuteur;
     }
@@ -43,16 +43,6 @@ class Etudiant extends Utilisateur {
     public function setMonTuteur(Tuteur $monTuteur): void
     {
         $this->monTuteur = $monTuteur;
-    }
-
-    public function getMonEntreprise(): ?Entreprise
-    {
-        return $this->monEntreprise;
-    }
-
-    public function setMonEntreprise(?Entreprise $monEntreprise): void
-    {
-        $this->monEntreprise = $monEntreprise;
     }
 
     public function getMaClasse(): Classe
@@ -129,7 +119,15 @@ class Etudiant extends Utilisateur {
         return $this->idUti;
     }
 
+    public function getMonEntreprise(): ?Entreprise
+    {
+        return $this->monEntreprise;
+    }
 
+    public function setMonEntreprise(?Entreprise $monEntreprise): void
+    {
+        $this->monEntreprise = $monEntreprise;
+    }
 
 
 

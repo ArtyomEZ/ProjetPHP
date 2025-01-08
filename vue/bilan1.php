@@ -64,39 +64,39 @@ if ($etudiant) {
 <main class="content">
     <h1>Bilan 1 - Premier Semestre 2024 - 2SIO</h1>
     <div class="greybox"><div class="whitebox">
-        <div class="row">
+            <div class="row">
 
-            <div class="column column-begin"><strong>Note de Dossier:</strong></div>
-            <div class="column column-end">
-                <?php echo htmlspecialchars($notedes ? $notedes->getNotDos() : 'Aucune note'); ?>
-            </div>
+                <div class="column column-begin"><strong>Note de Dossier:</strong></div>
+                <div class="column column-end">
+                    <?php echo htmlspecialchars($notedes ? $notedes->getNotDos() : 'Aucune note'); ?>
+                </div>
             </div>
         </div>
         <div class="whitebox">
-        <div class="row">
-            <div class="column column-begin"><strong>Note de d'Oral:</strong></div>
-            <div class="column column-end">
-                <?php echo htmlspecialchars($notedes ? $notedes->getNotOral() : 'Aucune note' ); ?>
-            </div>
-        </div></div>
+            <div class="row">
+                <div class="column column-begin"><strong>Note de d'Oral:</strong></div>
+                <div class="column column-end">
+                    <?php echo htmlspecialchars($notedes ? $notedes->getNotOral() : 'Aucune note' ); ?>
+                </div>
+            </div></div>
         <div class="whitebox">
-        <div class="row">
-            <div class="column column-begin"><strong>Moyenne du Bilan:</strong></div>
-            <div class="column column-end">    <?php
-                // Vérifier si les deux notes existent
-                if ($notedes !== null) {
-                    $moyenne = ($notedes->getNotDos() + $notedes->getNotOral()) / 2;
-                    echo number_format($moyenne, 2); // Affiche la moyenne avec 2 décimales
-                } else {
-                    echo 'Données manquantes';
-                }
-                ?></div>
-        </div></div>
+            <div class="row">
+                <div class="column column-begin"><strong>Moyenne du Bilan:</strong></div>
+                <div class="column column-end">    <?php
+                    // Vérifier si les deux notes existent
+                    if ($notedes !== null) {
+                        $moyenne = ($notedes->getNotDos() + $notedes->getNotOral()) / 2;
+                        echo number_format($moyenne, 2); // Affiche la moyenne avec 2 décimales
+                    } else {
+                        echo 'Données manquantes';
+                    }
+                    ?></div>
+            </div></div>
         <div class="whitebox">
-        <div class="row">
-            <div class="column column-begin"><strong>Remarque:</strong></div>
-            <div class="column column-end">  <?php echo htmlspecialchars($notedes ? $notedes->getRema() : 'Aucune Remarque' ); ?></div>
-        </div></div>
+            <div class="row">
+                <div class="column column-begin"><strong>Remarque:</strong></div>
+                <div class="column column-end">  <?php echo htmlspecialchars($notedes ? $notedes->getRema() : 'Aucune Remarque' ); ?></div>
+            </div></div>
 
     </div>
 </main>

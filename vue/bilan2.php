@@ -83,14 +83,14 @@ if ($etudiant) {
             <div class="row">
                 <div class="column column-begin"><strong>Moyenne du Bilan:</strong></div>
                 <div class="column column-end"> <strong>   <?php
-                    // Vérifier si les deux notes existent
-                    if ($notedes !== null) {
-                        $moyenne = ($notedes->getNotDos() + $notedes->getNotOral()) / 2;
-                        echo number_format($moyenne, 2); // Affiche la moyenne avec 2 décimales
-                    } else {
-                        echo 'Notes manquantes';
-                    }
-                    ?><strong></div>
+                        // Vérifier si les deux notes existent
+                        if ($notedes !== null) {
+                            $moyenne = ($notedes->getNotDos() + $notedes->getNotOral()) / 2;
+                            echo number_format($moyenne, 2); // Affiche la moyenne avec 2 décimales
+                        } else {
+                            echo 'Notes manquantes';
+                        }
+                        ?><strong></div>
             </div></div>
         <div class="whitebox">
             <div class="row">
@@ -106,4 +106,4 @@ if ($etudiant) {
     </div>
 </main>
 </body>
-</html>+
+</html>

@@ -1,6 +1,5 @@
 <?php
 require_once 'init.php';
-
 if (isset($_SESSION['login']) || $_SESSION['role'] !== 'admin') {
     $error = 'Permissions insuffisantes.';
     header('Location: ../vue/pageConnexion.php?error=' . ($error));
@@ -53,19 +52,11 @@ require_once '../Modele\BO\Etudiant.php';
 require_once '../Modele\BO\Alerte.php';
 require_once '../Modele\DAO\AlerteDAO.php';
 
-
-
-
 $bdd = initialiseConnexionBDD();
 $etudiantdao = new EtudiantDAO($bdd);
 $specialiteDAO = new SpecialiteDAO($bdd);
 
 $etudiant = $etudiantdao->getAll();
-
-
-
-
-
 ?>
 
 
@@ -93,6 +84,9 @@ $etudiant = $etudiantdao->getAll();
                     <th>
                         Classe
                     </th>
+                    <th>
+                        Tuteur
+                    </th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -111,13 +105,16 @@ $etudiant = $etudiantdao->getAll();
                             <?php echo $pnl->getMailUti(); ?>
                         </td>
                         <td>
-                            <?php echo htmlspecialchars($pnl->getMaSpecialite() ? $pnl->getMaSpecialite()->getNomSpe() : 'Aucune'); ?>
+                            <?php echo htmlspecialchars($pnl->getMaSpecialite() ? $pnl->getMaSpecialite()->getNomSpe() : 'Aucun'); ?>
                         </td>
                         <td>
-                            <?php echo htmlspecialchars($pnl->getMaClasse() ? $pnl->getMaClasse()->getNomCla() : 'Aucune'); ?>
+                            <?php echo htmlspecialchars($pnl->getMaClasse() ? $pnl->getMaClasse()->getNomCla() : 'Aucun'); ?>
                         </td>
                         <td>
-                            <a href="">+info</a>
+                            <?php echo htmlspecialchars($pnl->getMonTuteur() ? $pnl->getMonTuteur()->getNomUti() : 'Aucun'); ?>
+                        </td>
+                        <td>
+                            <a href="detailEtudiantAdmin.php?id=<?php echo $pnl->getidUti(); ?>">+info</a>
                         </td>
                         <td>
                             <a href="">+modifier</a>

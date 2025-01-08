@@ -69,17 +69,18 @@ if ($etudiant) {
 
 
 <div class="content">
+
     <div class="greyboxEt">
         <h1>Mes informations étudiants</h1>
         <div class="whitebox">
-            <form action="../controleur/ControlerUpdateEtudiant.php" method="post">
+            <form action="pageAccueilEtudiant.php" method="post">
                 <input type="hidden" name="idEtudiant" value="<?php echo htmlspecialchars($etudiant->getIdUti()); ?>">
                 <div class="row">
                     <div class="column">
                         <label>Nom :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" name="nomEtudiant" value="<?php echo htmlspecialchars($etudiant->getNomUti()); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($etudiant->getNomUti()); ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -87,7 +88,7 @@ if ($etudiant) {
                         <label>Prénom :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" name="prenomEtudiant" value="<?php echo htmlspecialchars($etudiant->getPreUti()); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($etudiant->getPreUti()); ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -95,7 +96,7 @@ if ($etudiant) {
                         <label>Téléphone :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" name="telEtudiant" value="<?php echo htmlspecialchars($etudiant->getTelUti()); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($etudiant->getTelUti()); ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -103,7 +104,7 @@ if ($etudiant) {
                         <label>Adresse :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" name="adresseEtudiant" value="<?php echo htmlspecialchars($etudiant->getAdrUti()), htmlspecialchars($etudiant->getVilUti()) ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($etudiant->getAdrUti()); ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -111,7 +112,7 @@ if ($etudiant) {
                         <label>Mail :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" name="mailEtudiant" value="<?php echo htmlspecialchars($etudiant->getMailUti()); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($etudiant->getMailUti()); ?>">
                     </div>
                 </div>
 
@@ -122,7 +123,7 @@ if ($etudiant) {
                         <label>Nom :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" name="nomEntreprise" value="<?php echo htmlspecialchars($entreprise ? $entreprise->getNomEnt() : 'Aucune entreprise'); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($entreprise ? $entreprise->getNomEnt() : 'Aucune entreprise'); ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -130,7 +131,7 @@ if ($etudiant) {
                         <label>Adresse :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" name="adresseEntreprise" value="<?php echo htmlspecialchars($entreprise ? $entreprise->getAdrEnt() : ''); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($entreprise ? $entreprise->getAdrEnt() : ''); ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -138,7 +139,7 @@ if ($etudiant) {
                         <label>Code Postal :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" name="cpEntreprise" value="<?php echo htmlspecialchars($entreprise ? $entreprise->getCpEnt() : ''); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($entreprise ? $entreprise->getCpEnt() : ''); ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -146,7 +147,7 @@ if ($etudiant) {
                         <label>Ville :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" name="villeEntreprise" value="<?php echo htmlspecialchars($entreprise ? $entreprise->getVilEnt() : ''); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($entreprise ? $entreprise->getVilEnt() : ''); ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -154,15 +155,16 @@ if ($etudiant) {
                         <label>Nom maître apprentissage :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" name="nomMaitre" value="<?php echo htmlspecialchars($maitre ? $maitre->getNomMai() : 'Aucun maître d\'apprentissage'); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($maitre ? $maitre->getNomMai() : 'Aucun maître d\'apprentissage'); ?>">
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="column">
                         <label>Prénom maître apprentissage :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" name="prenomMaitre" value="<?php echo htmlspecialchars($maitre ? $maitre->getPreMai() : ''); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($maitre ? $maitre->getPreMai() : ''); ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -170,7 +172,7 @@ if ($etudiant) {
                         <label>Tel maître apprentissage :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" name="telMaitre" value="<?php echo htmlspecialchars($maitre ? $maitre->getTelMai() : ''); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($maitre ? $maitre->getTelMai() : ''); ?>">
                     </div>
                 </div>
                 <div class="row">
@@ -178,17 +180,30 @@ if ($etudiant) {
                         <label>Mail maître apprentissage :</label>
                     </div>
                     <div class="column-begin">
-                        <input type="text" name="mailMaitre" value="<?php echo htmlspecialchars($maitre ? $maitre->getMailMai() : ''); ?>">
+                        <input type="text" value="<?php echo htmlspecialchars($maitre ? $maitre->getMailMai() : ''); ?>">
                     </div>
                 </div>
 
                 <br>
+
+
                 <div class="row">
-                    <div class="button">
-                        <input type="submit" value="Confirmer">
+                    <div class ="button">
+                        <input type="submit" value="Confirmer" >
                     </div>
+
                 </div>
+
+
             </form>
+
+
+
+            <br>
+            <br>
+            <br>
         </div>
     </div>
 </div>
+</body>
+    </HTML><?php

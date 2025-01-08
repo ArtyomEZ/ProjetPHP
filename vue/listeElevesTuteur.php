@@ -1,5 +1,12 @@
 <?php
 
+require_once 'init.php';
+if (isset($_SESSION['login']) || $_SESSION['role'] !== 'tuteur') {
+    $error = 'Permissions insuffisantes.';
+    header('Location: ../vue/pageConnexion.php?error=' . ($error));
+    exit;
+}
+
 use DAO\TuteurDAO;
 use DAO\EtudiantDAO;
 use DAO\SpecialiteDAO;
@@ -62,15 +69,14 @@ $etudiant = $dao->getEtuByTut($tuteur);
                             <?php echo htmlspecialchars($pnl->getMaClasse() ? $pnl->getMaClasse()->getNomCla() : 'Aucune'); ?>
                         </td>
                         <td>
-                            <a href="">+info</a>
+                            <a href="detailEtudiantTuteur.php?id=<?php echo $pnl->getidUti(); ?>">+info</a>
                         </td>
+
                         <td>
                             <a href="">+modifier</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
-
-
             </table>
         </div>
     </div>

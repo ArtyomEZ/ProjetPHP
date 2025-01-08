@@ -8,7 +8,6 @@ if (isset($_SESSION['login']) || $_SESSION['role'] !== 'etudiant') {
 ?>
 
 
-<link rel="stylesheet" href="../css/style1.css">
 
 <div class="content">
     <h1>
@@ -24,13 +23,11 @@ if (isset($_SESSION['login']) || $_SESSION['role'] !== 'etudiant') {
                     </h2>
                     <br>
                     <br>
-                    <form action="bilan1.php">
+                    <form action="">
                         <input type="submit" class="sub-center" value="Voir">
                     </form>
                     <br>
                 </div>
-            </div>
-            <div class="column">
             </div>
             <div class="column">
                 <div class="whitebox">
@@ -40,9 +37,10 @@ if (isset($_SESSION['login']) || $_SESSION['role'] !== 'etudiant') {
                     </h2>
                     <br>
                     <br>
-                    <form action="bilan2.php">
+                    <form action="">
                         <input type="submit" class="sub-center" value="Voir">
                     </form>
+                    
                     <br>
                 </div>
             </div>

@@ -245,3 +245,18 @@ label
     background-color: white;
     font: 1.2rem "Fira Sans", sans-serif;
 }
+
+.msg-erreur
+{
+    text-align: center;
+}
+
+.button-confirmer
+{
+    float:left;
+    margin: 8px 8px 0px 8vw;
+    padding: 8px 20px;
+    border-radius: 8px;
+    background-color: white;
+    font: 1.2rem "Fira Sans", sans-serif;
+}

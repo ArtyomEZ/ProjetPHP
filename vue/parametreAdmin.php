@@ -46,6 +46,9 @@ require_once '../Modele/BO/Etudiant.php';
     <!-- Section Étudiant + Entreprise -->
     <div class="form-section">
         <h2>Nouvel Étudiant</h2>
+        <?php if (isset($_GET['modif'])): ?>
+            <p style="color: green;"><?= htmlspecialchars($_GET['modif']); ?></p>
+        <?php endif; ?>
         <form action="../controleur/ControleurAjtEleve.php" method="post">
             <!-- Informations Étudiant -->
             <div class="row">
@@ -63,6 +66,14 @@ require_once '../Modele/BO/Etudiant.php';
             <div class="row">
                 <div class="column">Adresse :</div>
                 <div class="column-begin"><input type="text" name="adresseEtudiant"></div>
+            </div>
+            <div class="row">
+                <div class="column">Code Postal :</div>
+                <div class="column-begin"><input type="text" name="codePostal"></div>
+            </div>
+            <div class="row">
+                <div class="column">Ville :</div>
+                <div class="column-begin"><input type="text" name="ville"></div>
             </div>
             <div class="row">
                 <div class="column">Mail :</div>
@@ -105,7 +116,23 @@ require_once '../Modele/BO/Etudiant.php';
                     <div class="column-begin"><input type="text" name="mailMaitreApprentissage"></div>
                 </div>
             </div>
-
+            <div class="row">
+                <div class="column">Classe :</div>
+                <div class="column-begin">
+                    <select name="classeTuteur">
+                        <option value="">Sélectionner une classe</option>
+                        <?php
+                        // Récupérer toutes les classes depuis la base de données
+                        $bdd = initialiseConnexionBDD();
+                        $classeDAO = new \DAO\ClasseDAO($bdd);
+                        $classes = $classeDAO->getAll();
+                        foreach ($classes as $classe) {
+                            echo "<option value='{$classe->getIdCla()}'>{$classe->getNomCla()}</option>";
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
             <!-- Bouton de confirmation pour Étudiant + Entreprise -->
             <div class="button">
                 <input type="submit" value="Confirmer">
@@ -132,23 +159,7 @@ require_once '../Modele/BO/Etudiant.php';
                 <div class="column">Mail :</div>
                 <div class="column-begin"><input type="text" name="mailTuteur"></div>
             </div>
-            <div class="row">
-                <div class="column">Classe :</div>
-                <div class="column-begin">
-                    <select name="classeTuteur">
-                        <option value="">Sélectionner une classe</option>
-                        <?php
-                        // Récupérer toutes les classes depuis la base de données
-                        $bdd = initialiseConnexionBDD();
-                        $classeDAO = new \DAO\ClasseDAO($bdd);
-                        $classes = $classeDAO->getAll();
-                        foreach ($classes as $classe) {
-                            echo "<option value='{$classe->getIdCla()}'>{$classe->getNomCla()}</option>";
-                        }
-                        ?>
-                    </select>
-                </div>
-            </div>
+
 
             <!-- Bouton de confirmation pour Tuteur -->
             <div class="button">

@@ -15,12 +15,12 @@ if (isset($_SESSION['login']) || $_SESSION['role'] !== 'tuteur') {
             <img src="../img/FSI_logo.png" alt="Logo FSI" class="header-logo">
         </div>
         <div class="column">
-            <a href="">
+            <a href="pageAccueilTuteur.php">
                 <p>Accueil</p>
             </a>
         </div>
         <div class="column">
-            <a href="MesinfoTuteur.php">
+            <a href="../vue/mesinfosTuteur.php">
                 <p>Mes informations</p>
             </a>
         </div>
