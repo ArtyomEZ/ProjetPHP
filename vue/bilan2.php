@@ -62,7 +62,7 @@ if ($etudiant) {
 <body>
 
 <main class="content">
-    <h1>Bilan 1 - Premier Semestre 2024 - 2SIO</h1>
+    <h1>Bilan 2 - Premier Semestre 2024 - 2SIO</h1>
     <div class="greybox"><div class="whitebox">
             <div class="row">
 

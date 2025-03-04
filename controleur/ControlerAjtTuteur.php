@@ -31,28 +31,23 @@ require_once '../Modele/BO/Etudiant.php';
 $bdd = initialiseConnexionBDD();
 $classeDAO = new ClasseDAO($bdd);
 $tuteurDAO = new TuteurDAO($bdd);
-
 // Vérification des données du formulaire
 if (
     isset($_POST['nomTuteur']) && !empty($_POST['nomTuteur']) &&
     isset($_POST['prenomTuteur']) && !empty($_POST['prenomTuteur']) &&
     isset($_POST['telephoneTuteur']) && !empty($_POST['telephoneTuteur']) &&
-    isset($_POST['mailTuteur']) && !empty($_POST['mailTuteur']) &&
-    isset($_POST['classeTuteur']) && !empty($_POST['classeTuteur'])
+    isset($_POST['mailTuteur']) && !empty($_POST['mailTuteur'])
 ) {
-
     $nom = htmlspecialchars($_POST['nomTuteur']);
     $prenom = htmlspecialchars($_POST['prenomTuteur']);
     $telephone = htmlspecialchars($_POST['telephoneTuteur']);
     $mail = htmlspecialchars($_POST['mailTuteur']);
-    $idClasse = (int)$_POST['classeTuteur'];
+
 
     // Récupérer la classe depuis la BDD
-    $classe = $classeDAO->getById($idClasse);
 
-    if (!$classe) {
-        echo "La classe sélectionnée n'existe pas.";
-    } else {
+
+
 
         $nbrMaxEtu3 = 5;
         $nbrMaxEtu4 = 5;
@@ -82,18 +77,18 @@ if (
         );
 
 
-        // Enregistrer le tuteur dans la base de données
+//         Enregistrer le tuteur dans la base de données
         if ($tuteurDAO->create($tuteur)) {
-            header('Location: ../vue/pageAccueilAdmin.php');
+            $modif1 = '✅ Tueur ajouté en base de données';
+            header('Location: ../vue/parametreAdmin.php?modif1='. urlencode($modif1));
         } else {
-            header('Location: ../vue/parametreAdmin.php');
-            echo "❌ Erreur lors de l'ajout du tuteur.";
-        }
+            $modif1 = "❌ Erreur lors de l'ajout du tuteur.";
+            header('Location: ../vue/parametreAdmin.php?modif1='. urlencode($modif1));
+
+
     }
 } else {
-    header('Location: ../vue/parametreAdmin.php');
-    echo "❌ Veuillez remplir tous les champs obligatoires du formulaire.";
-}
+    $modif1 = "❌ Veuillez remplir tous les champs obligatoires du formulaire.";
+    header('Location: ../vue/parametreAdmin.php?modif1=' . urlencode($modif1));
 
-$caca = $tuteurDAO->getAll();
-var_dump($caca);
+}

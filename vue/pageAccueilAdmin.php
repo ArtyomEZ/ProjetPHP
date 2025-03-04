@@ -23,6 +23,9 @@ include("../vue/listeEleves.php");
 ?>
 <a href="parametreAdmin.php">Paramètre générale</a>
 <br>
+<a href="pageGestionTuteur.php">Page Gestion Tuteur</a>
+
+<br>
 <br>
 </body>
 </html>

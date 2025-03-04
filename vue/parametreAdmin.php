@@ -36,14 +36,13 @@ require_once '../Modele/BO/Etudiant.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire Étudiant et Tuteur</title>
-    <link rel="stylesheet" href="../css/style3.css"> <!-- Assure-toi que ce fichier CSS est bien lié -->
+    <link rel="stylesheet" href="../css/style3.css">
 </head>
 <body class="connexion">
 
-<!-- Conteneur Principal -->
 <div class="form-container">
 
-    <!-- Section Étudiant + Entreprise -->
+
     <div class="form-section">
         <h2>Nouvel Étudiant</h2>
         <?php if (isset($_GET['modif'])): ?>
@@ -79,10 +78,45 @@ require_once '../Modele/BO/Etudiant.php';
                 <div class="column">Mail :</div>
                 <div class="column-begin"><input type="text" name="mailEtudiant"></div>
             </div>
+            <div class="row">
+                <div class="column">Classe :</div>
+                <div class="column-begin">
+                    <select name="classeTuteur">
+                        <option value="">Sélectionner une classe</option>
+                        <?php
+                        // Récupérer toutes les classes depuis la base de données
+                        $bdd = initialiseConnexionBDD();
+                        $classeDAO = new \DAO\ClasseDAO($bdd);
+                        $classes = $classeDAO->getAll();
+                        foreach ($classes as $classe) {
+                            echo "<option value='{$classe->getIdCla()}'>{$classe->getNomCla()}</option>";
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
 
             <!-- Section Entreprise -->
             <div class="enterprise-section">
                 <h2>Entreprise (optionnel)</h2>
+
+                <div class="row">
+                    <div class="column">Entreprise :</div>
+                    <div class="column-begin">
+                        <select name="entrepriseEtu">
+                            <option value="">Sélectionner une entreprise</option>
+                            <?php
+                            // Récupérer toutes les classes depuis la base de données
+                            $bdd = initialiseConnexionBDD();
+                            $entrepriseDAO = new \DAO\EntrepriseDAO($bdd);
+                            $entreprise = $entrepriseDAO->getAll();
+                            foreach ($entreprise as $entreprises) {
+                                echo "<option value='{$entreprises->getIdEnt()}'>{$entreprises->getNomEnt()}</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="column">Nom :</div>
                     <div class="column-begin"><input type="text" name="nomEntreprise"></div>
@@ -116,24 +150,7 @@ require_once '../Modele/BO/Etudiant.php';
                     <div class="column-begin"><input type="text" name="mailMaitreApprentissage"></div>
                 </div>
             </div>
-            <div class="row">
-                <div class="column">Classe :</div>
-                <div class="column-begin">
-                    <select name="classeTuteur">
-                        <option value="">Sélectionner une classe</option>
-                        <?php
-                        // Récupérer toutes les classes depuis la base de données
-                        $bdd = initialiseConnexionBDD();
-                        $classeDAO = new \DAO\ClasseDAO($bdd);
-                        $classes = $classeDAO->getAll();
-                        foreach ($classes as $classe) {
-                            echo "<option value='{$classe->getIdCla()}'>{$classe->getNomCla()}</option>";
-                        }
-                        ?>
-                    </select>
-                </div>
-            </div>
-            <!-- Bouton de confirmation pour Étudiant + Entreprise -->
+
             <div class="button">
                 <input type="submit" value="Confirmer">
             </div>
@@ -142,6 +159,9 @@ require_once '../Modele/BO/Etudiant.php';
 
     <div class="form-section tuteur">
         <h2>Nouveau Tuteur</h2>
+        <?php if (isset($_GET['modif1'])): ?>
+            <p style="color: green;"><?= htmlspecialchars($_GET['modif1']); ?></p>
+        <?php endif; ?>
         <form action="../controleur/ControlerAjtTuteur.php" method="post">
             <div class="row">
                 <div class="column">Nom :</div>
@@ -161,7 +181,7 @@ require_once '../Modele/BO/Etudiant.php';
             </div>
 
 
-            <!-- Bouton de confirmation pour Tuteur -->
+<!--             Bouton de confirmation pour Tuteur -->
             <div class="button">
                 <input type="submit" value="Confirmer">
             </div>
