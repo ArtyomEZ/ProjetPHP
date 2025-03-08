@@ -12,7 +12,7 @@ if (isset($_SESSION['login']) || $_SESSION['role'] !== 'admin') {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/pageAcceuilAdmin.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Accueil</title>
 </head>
 <body>
@@ -21,20 +21,12 @@ include("../vue/headerAdmin.php");
 include("../vue/alertesAdmin.php");
 include("../vue/listeEleves.php");
 ?>
-<a href="parametreAdmin.php">Paramètre Admin</a>
-<br>
-<br>
-
-<a href="pageGestionTuteur.php"> Gestion Tuteur</a>
-<br>
-<br>
-<a href="affectationTuteurs.php"> Affectation Tuteur </a>
-<br>
-<br>
-<a href="pageParametresGeneraux.php">Paramètre Généraux </a>
-
-
-<br>
-<br>
+<div class="liensadmin">
+    <a href="parametreAdmin.php">Paramètres Admin</a>
+    <br><br>
+    <a href="parametreAdmin.php">Affectation Tuteurs</a>
+    <br><br>
+    <a href="parametreAdmin.php">Paramètres Généraux</a>
+</div>
 </body>
 </html>

@@ -30,6 +30,45 @@
     align-content: center;
     align-items: start;
 }
+.msg-erreur
+{
+    text-align: center;
+}
+
+.button-confirmer
+{
+    float:left;
+    margin: 8px 8px 0px 8vw;
+    padding: 8px 20px;
+    border-radius: 8px;
+    background-color: white;
+    font: 1.2rem "Fira Sans", sans-serif;
+}
+.sub-center {
+    background-color: #9ED6A7 !important;
+    border: 4px #9ED6A7;
+    color: white;
+    font-size: 22px !important;
+    font-weight: bold !important;
+    border-radius: 50px !important;
+    cursor: pointer !important;
+    padding: 15px 30px !important;
+    margin: 20px auto !important; /* Centrage parfait */
+}
+.sub-center:hover {
+    background-color: #81C784 !important;
+}
+
+.whiteboxbilan {
+    margin: 20px;
+    background-color: #FFFDFD ;
+    text-align: center;
+    border-radius: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
 
 body
 {

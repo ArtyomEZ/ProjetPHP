@@ -12,7 +12,7 @@
 .column {
     text-align: center;
     height: inherit;
-    flex: 50%;
+
     align-content: center;
 }
 
@@ -95,7 +95,7 @@ h1
 
 .greybox
 {
-    padding: 4px;
+    padding: 10px;
     background-color: #D9D9D9;
 
 }
@@ -126,16 +126,29 @@ h1
     text-align: right;
 }
 
-.whitebox
-{
-    margin: 12px;
-    background-color: #FFFDFD;
+.whitebox {
+    background-color: #ffffff; /* Fond blanc */
+    padding: 20px; /* Augmente l'espace intérieur */
+    margin: 15px 0; /* Ajoute de l'espace entre les boîtes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour donner du relief */
+    min-height: 50px; /* Minimum pour la hauteur */
+    width: 97%; /* Si tu veux que les boîtes prennent toute la largeur */
 }
 
-a
-{
-    color: #5031FF;
+/*.whitebox .row {*/
+/*    display: flex;*/
+/*    justify-content: space-between; !* Aligne les éléments à gauche et à droite *!*/
+/*    padding: 5px 0;*/
+/*}*/
+
+.column {
+    padding: 10px; /* Plus d'espace dans les colonnes */
 }
+
+.column-begin {
+    font-weight: bold;
+}
+
 
 hr{
     border-color: #9ED6A7;
@@ -232,7 +245,7 @@ label
 {
     padding: 4px;
     background-color: #D9D9D9;
-    margin: 240px;
+
     margin-bottom: 50svh;
 
 }
@@ -245,26 +258,43 @@ label
     background-color: white;
     font: 1.2rem "Fira Sans", sans-serif;
 }
-
-.msg-erreur
-{
-    text-align: center;
+select {
+    
+    width: 100%; /* Largeur du conteneur parent */
+    padding: 10px 15px; /* Ajoute de l'espace intérieur */
+    border: 2px solid #9ED6A7; /* Bordure personnalisée */
+    border-radius: 8px; /* Coins arrondis */
+    background-color: #FFFDFD; /* Fond blanc */
+    font-size: 1rem; /* Taille de la police */
+    font-family: "Fira Sans", sans-serif; /* Police harmonisée avec la page */
+    color: #577A5C; /* Couleur du texte */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet de relief */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animation pour un effet interactif */
 }
 
-.button-confirmer
-{
-    float:left;
-    margin: 8px 8px 0px 8vw;
-    padding: 8px 20px;
-    border-radius: 8px;
-    background-color: white;
-    font: 1.2rem "Fira Sans", sans-serif;
+/* Style au survol */
+select:hover {
+    border-color: #7BB387; /* Change la couleur de la bordure au survol */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Accentue l'ombre */
 }
 
-a
-{
-    font-weight: bold;
-    color: #000000;
-    text-decoration: underline;
-    font-size: 120%;
+/* Style quand le select est actif (focus) */
+select:focus {
+    outline: none; /* Supprime la bordure par défaut */
+    border-color: #577A5C; /* Couleur de la bordure en focus */
+    box-shadow: 0 0 5px rgba(87, 122, 92, 0.5); /* Effet lumineux */
+}
+
+/* Options dropdown */
+select option {
+    font-size: 1rem; /* Harmonise la taille des options */
+    padding: 8px; /* Espace intérieur */
+    background-color: #FFFDFD; /* Fond blanc pour les options */
+    color: #577A5C; /* Couleur du texte */
+}
+
+/* Ajustement pour les conteneurs contenant le select */
+.column-begin select {
+    margin: 0 auto; /* Centrage dans la colonne */
+    display: block;
 }

@@ -117,7 +117,7 @@ $etudiant = $etudiantdao->getAll();
                             <a href="detailEtudiantAdmin.php?id=<?php echo $pnl->getidUti(); ?>">+info</a>
                         </td>
                         <td>
-                            <a href="">+modifier</a>
+                            <a href="ModifierEtudiantAdmin.php?id=<?php echo $pnl->getidUti(); ?>">+modifier</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
