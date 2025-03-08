@@ -344,5 +344,27 @@ class EtudiantDAO
         }
     }
 
-
+    public function assignerTuteur(int $idEtu, int $idTuteur): bool {
+        try {
+            $sql = "UPDATE Utilisateur SET idTut = :idTut WHERE idUti = :idUti AND idTypUser = 1";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->bindValue(':idTut', $idTuteur, PDO::PARAM_INT);
+            $stmt->bindValue(':idUti', $idEtu, PDO::PARAM_INT);
+            return $stmt->execute();
+        } catch (\Exception $e) {
+            echo "Erreur lors de l'assignation du tuteur : " . $e->getMessage();
+            return false;
+        }
+    }
+    public function desassignerTuteur(int $idEtu): bool {
+        try {
+            $sql = "UPDATE Utilisateur SET idTut = NULL WHERE idUti = :idUti AND idTypUser = 1";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->bindValue(':idUti', $idEtu, PDO::PARAM_INT);
+            return $stmt->execute();
+        } catch (\Exception $e) {
+            echo "Erreur lors de la désassignation du tuteur : " . $e->getMessage();
+            return false;
+        }
+    }
 }

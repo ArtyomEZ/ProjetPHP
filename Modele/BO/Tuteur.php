@@ -3,6 +3,8 @@
 namespace BO;
 
 use Couchbase\User;
+require_once 'Utilisateur.php';
+
 
 class Tuteur extends Utilisateur {
 

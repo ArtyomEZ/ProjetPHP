@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ee939c53-e70e-42bb-912e-c487d1df4b7a" name="Changes" comment="LOT 4">
+      <change afterPath="$PROJECT_DIR$/controleur/ControlerAjtTuteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controleur/ControlerUpdateEtudiant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controleur/ControlerUpdateTuteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controleur/ControleurAjtEleve.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/pageAcceuilEtu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/pageAccueilAdm.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/style3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style4.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style4.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/bilan1.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/bilan1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/bilan2.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/bilan2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/parametreAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/parametreAdmin.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Modele/DAO/TuteurDAO.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2gEZxqown5gPDqbzvA94y61e11c" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;PHP Script.test.php.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/wamp64/www/php/Blog&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.web.browsers&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="ControleurAjtEleve.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/controleur/ControleurAjtEleve.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.ControleurAjtEleve.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PS-241.14494.237" />
+        <option value="bundled-php-predefined-ba97393d7c68-8f0632a2a215-com.jetbrains.php.sharedIndexes-PS-241.14494.237" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee939c53-e70e-42bb-912e-c487d1df4b7a" name="Changes" comment="" />
+      <created>1715264946781</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715264946781</updated>
+      <workItem from="1715264947830" duration="2121000" />
+      <workItem from="1715275116078" duration="2660000" />
+      <workItem from="1715510011355" duration="1639000" />
+      <workItem from="1715541922592" duration="5914000" />
+      <workItem from="1715609706540" duration="2519000" />
+      <workItem from="1715627752426" duration="39000" />
+      <workItem from="1715627851193" duration="4993000" />
+      <workItem from="1715667649909" duration="1303000" />
+      <workItem from="1715669000599" duration="10291000" />
+      <workItem from="1715680600242" duration="8603000" />
+      <workItem from="1715714829652" duration="9524000" />
+      <workItem from="1715782818849" duration="8000" />
+      <workItem from="1715841021226" duration="2155000" />
+      <workItem from="1732658430392" duration="58595000" />
+      <workItem from="1732875876495" duration="14000" />
+      <workItem from="1732875901720" duration="25000" />
+      <workItem from="1732875936980" duration="9000" />
+      <workItem from="1732875956349" duration="29000" />
+      <workItem from="1732876042396" duration="30000" />
+      <workItem from="1732876197129" duration="2309000" />
+      <workItem from="1733400923183" duration="1589000" />
+      <workItem from="1733905390874" duration="12971000" />
+      <workItem from="1733941850666" duration="4592000" />
+      <workItem from="1733951921645" duration="5623000" />
+      <workItem from="1733991735014" duration="6871000" />
+      <workItem from="1734009002321" duration="8449000" />
+      <workItem from="1734083553178" duration="568000" />
+      <workItem from="1734087329319" duration="467000" />
+      <workItem from="1734380314522" duration="3870000" />
+      <workItem from="1734449722415" duration="7468000" />
+      <workItem from="1734513987465" duration="2238000" />
+      <workItem from="1735508538145" duration="263000" />
+      <workItem from="1735731891759" duration="990000" />
+      <workItem from="1735897382887" duration="5237000" />
+      <workItem from="1735909568938" duration="4782000" />
+      <workItem from="1736077672431" duration="7365000" />
+      <workItem from="1736094253598" duration="4964000" />
+      <workItem from="1736150587688" duration="4239000" />
+      <workItem from="1736241292182" duration="1609000" />
+      <workItem from="1736255260605" duration="6318000" />
+      <workItem from="1736323897398" duration="7131000" />
+      <workItem from="1736354988422" duration="6089000" />
+      <workItem from="1736411465487" duration="3456000" />
+      <workItem from="1736503636372" duration="2045000" />
+      <workItem from="1737030589750" duration="22000" />
+    </task>
+    <task id="LOCAL-00001" summary="LOT 4">
+      <option name="closed" value="true" />
+      <created>1735902585428</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735902585428</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="LOT 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="LOT 4" />
+  </component>
+</project>

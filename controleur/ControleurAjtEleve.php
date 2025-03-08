@@ -57,13 +57,24 @@ if (
     $adrE = htmlspecialchars($_POST['adresseEntreprise'] ?? '');
     $cpE = htmlspecialchars($_POST['codePostalEntreprise'] ?? '');
     $ville = htmlspecialchars($_POST['villeEntreprise'] ?? '');
-
-    $entreprise = new Entreprise(0, $nomE, $adrE, $cpE, $ville);
     $entrepriseDAO = new DAO\EntrepriseDAO($bdd);
+    $ident = (int)$_POST['entrepriseEtu'];
+    if
+    ($ident != 0 && !empty($nomE) && !empty($adrE) && !empty($cpE) && !empty($ville)){
+        $modif = 'Impossible d\'assigner deux entreprises';
+        header('Location: ../vue/parametreAdmin.php?modif='. urlencode($modif));
+    } else if ($ident !=0){
+    $entreprise = $entrepriseDAO->GetById($ident);
+}
 
-    if ($entrepriseDAO->Create($entreprise)) {
-        $idEntreprise = $bdd->lastInsertId();
-        $entreprise = new Entreprise($idEntreprise, $nomE, $adrE, $cpE, $ville); // ✅ Mise à jour avec l'ID
+        else{
+            $entreprise = new Entreprise(0, $nomE, $adrE, $cpE, $ville);
+            $entrepriseDAO->Create($entreprise);
+        }
+
+
+
+
 
         // ✅ Récupération des données du maître d'apprentissage
         $nomM = htmlspecialchars($_POST['nomMaitreApprentissage'] ?? '');
@@ -71,6 +82,9 @@ if (
         $telM = htmlspecialchars($_POST['telephoneMaitreApprentissage'] ?? '');
         $mailM = htmlspecialchars($_POST['mailMaitreApprentissage'] ?? '');
         $idClasse = (int)$_POST['classeTuteur'];
+
+
+
 
         // Récupérer la classe depuis la BD
         //
@@ -96,7 +110,7 @@ if (
 
             // ✅ Création de l'étudiant
             $etudiant = new Etudiant(
-                false,
+                true,
                 $entreprise,
                 $tuteur,
                 $classe,
@@ -133,15 +147,12 @@ if (
             header('Location: ../vue/parametreAdmin.php?modif='. urlencode($modif));
         }
 
-    } else {
 
-        $modif = "❌ Erreur dans la création de l'entreprise.";
-        header('Location: ../vue/parametreAdmin.php?modif='. urlencode($modif));
-    }
 
 } else {
 
     $modif = "❌ Veuillez remplir tous les champs obligatoires de l'étudiant.";
-    header('Location: ../vue/parametreAdmin.php?modif='. urlencode($modif));
+    header('Location: ../vue/parametreAdmin.php?modif=' . urlencode($modif));
+
 
 }
